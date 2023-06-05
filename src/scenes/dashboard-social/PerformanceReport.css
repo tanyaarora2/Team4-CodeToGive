@@ -1,0 +1,17 @@
+.chart-container {
+  display: flex;
+  width: 1300px;
+  /* border: 10px solid blue; */
+  height: 850x;
+  margin: auto auto;
+  /* margin: 0px 150px; */
+  justify-content: space-between;
+}
+
+.canvas-container {
+  margin-bottom: 20px;
+  height: 500px;
+  width: 900px;
+  /* border: 20px solid red; */
+  margin-right: 150px;
+}
