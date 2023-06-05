@@ -1,5 +1,5 @@
 .home-navbar {
-  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  background: Rgb(54, 39, 64);
   height: 80px;
   display: flex;
   justify-content: flex-end;
@@ -16,7 +16,7 @@
 
 .Navbtnlink {
   border-radius: 50px;
-  background: green;
+  background: Rgb(105, 191, 100);
   white-space: nowrap;
   padding: 10px 22px;
   margin-right: 20px;

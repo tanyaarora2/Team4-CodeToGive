@@ -5,6 +5,7 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import listPlugin from "@fullcalendar/list";
+import "./Calendar.css";
 import { Box, List, ListItem, ListItemText, Typography } from "@mui/material";
 const Calendar = () => {
   const [currentEvents, setCurrentEvents] = useState([]);

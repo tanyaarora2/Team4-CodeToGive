@@ -4,12 +4,13 @@
   margin: 40px 60px;
   height: 300px;
   border-radius: 95px;
-  background: rgb(222, 184, 135);
+  /* background: rgb(222, 184, 135);
   background: radial-gradient(
     circle,
     rgba(222, 184, 135, 1) 0%,
     rgba(208, 114, 37, 0.8576680672268908) 86%
-  );
+  ); */
+  background: white;
 }
 .profile-photo {
   flex: 1;

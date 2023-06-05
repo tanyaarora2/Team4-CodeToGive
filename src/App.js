@@ -1,8 +1,9 @@
 import "./App.css";
-import Home from "./scenes/HomePage";
+import Home from "./scenes/Home/HomePage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import DashboardSocial from "./scenes/dashboard-social";
-import Profile from "./scenes/dashboard-social/profile";
+import Login from "./scenes/Home/HomePage/LoginPage";
+// import Profile from "./scenes/dashboard-social/profile";
 function App() {
   return (
     <>
@@ -10,7 +11,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/DashboardSocial" element={<DashboardSocial />} />
-          <Route exact path="/Profile" element={<Profile />} />
+          <Route exact path="/login" element={<Login />} />
         </Routes>
       </Router>
     </>
