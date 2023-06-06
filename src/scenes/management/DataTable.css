@@ -1,0 +1,11 @@
+.grid-table {
+    width:60%;
+    border-collapse: collapse;
+    margin-left: 45px;
+  }
+  
+  .grid-table th,
+  .grid-table td {
+    border: 1px solid black;
+    padding: 8px;
+  }
