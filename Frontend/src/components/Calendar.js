@@ -38,7 +38,7 @@ const Calendar = () => {
 
   return (
     <div
-      class="calendarContainer"
+      className="calendarContainer"
       style={{ position: "absolute", right: 11, top: 100, width: "40vw" }}
     >
       {/* CALENDAR SIDEBAR */}

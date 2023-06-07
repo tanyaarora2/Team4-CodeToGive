@@ -14,26 +14,26 @@ function Navbar() {
         <div className="navbar-container">
           <div className="NavBtn">
             <div className="Navbtnlink">
-              <NavBtnLink to="login">Log In</NavBtnLink>
+              <NavBtnLink to="Login">Log In</NavBtnLink>
             </div>
           </div>
           <div className="NavBtn">
-            <div className="Navbtnlink">
-              <button className="dropdown-button" onClick={toggleDropdown}>
-                Language
-              </button>
-            </div>
-            {isDropdownOpen && (
-              <div className="dropdown-content">
-                <ul>
-                  <li>Hindi</li>
-                  <li>Marathi</li>
-                  <li>Kannada</li>
-                  {/* Add more language options as needed */}
-                </ul>
-              </div>
-            )}
+            {/* <div className="Navbtnlink"> */}
+            <button className="dropdown-button" onClick={toggleDropdown}>
+              Language
+            </button>
           </div>
+          {isDropdownOpen && (
+            <div className="dropdown-content">
+              <ul>
+                <li>Hindi</li>
+                <li>Marathi</li>
+                <li>Kannada</li>
+                {/* Add more language options as needed */}
+              </ul>
+            </div>
+          )}
+          {/* </div> */}
         </div>
       </nav>
     </>

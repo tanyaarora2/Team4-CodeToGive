@@ -1,0 +1,34 @@
+.social-table {
+  margin-top: 23px;
+  width: 90%;
+  border-collapse: collapse;
+  margin-left: 2px;
+}
+
+.social-table th,
+.social-table td {
+  border: 2px solid black;
+  text-align: center;
+  height: 38px;
+}
+
+.head-social {
+  color: #362740;
+  text-transform: uppercase;
+}
+.details-button {
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.details-button:hover {
+  background-color: #5013c0;
+}
+.social-table th:hover {
+  background-color: aliceblue;
+}
+.social-table tr:hover {
+  background-color: #ebebeb;
+}

@@ -5,22 +5,39 @@ import Calendar from "../../components/Calendar";
 import profilephoto from "../../images/profile-photo.jpg";
 import PerformanceReport from "./PerformanceReport";
 import "./profile.css";
+import Form from "./SocialWorkerForm";
 const DashboardSocial = () => {
   const [showCalendar, setShowCalendar] = useState(false);
+  const [showForm, setShowForm] = useState(false);
+
+  const handleAddCaseClick = () => {
+    setShowForm((prevShowForm) => !prevShowForm);
+  };
   return (
     <>
       <nav className="navbar-social">
         <div className="left-buttons">
-          <button className="NavBtn Navbtnlink">Add a case</button>
-          <button className="NavBtn Navbtnlink">Assigned Case</button>
+          <button className="NavBtn Navbtnlink" onClick={handleAddCaseClick}>
+            Add a case
+          </button>
+          <div className="NavBtn  Navbtnlink">
+            <NavBtnLink to="/AssignedCases">Assigned Cases</NavBtnLink>
+          </div>
+          {showForm && (
+            <div className="form-overlay">
+              <div className="add-case-form">
+                <Form settShowForm={setShowForm} />
+              </div>
+            </div>
+          )}
         </div>
         <div className="right-buttons">
           {/* <div className="NavBtn  Navbtnlink">
-            <NavBtnLink to="/Profile">Profile</NavBtnLink>
-            {/* <button className="NavBtn Navbtnlink"></button> */}
+            <NavBtnLink to="/Profile">Profile</NavBtnLink> */}
+          {/* <button className="NavBtn Navbtnlink"></button>  */}
+          {/* </div> */}
           <div className="NavBtn  Navbtnlink">
             <NavBtnLink to="/">Home</NavBtnLink>
-            {/* <button className="NavBtn Navbtnlink"></button> */}
           </div>
           <button
             className="NavBtn Navbtnlink"
@@ -31,7 +48,7 @@ const DashboardSocial = () => {
           {showCalendar && <Calendar />}
         </div>
       </nav>
-      <div className="profile-container">
+      <div className={`profile-container ${showForm ? "hidden" : ""}`}>
         <div className="profile-photo">
           <img src={profilephoto} alt="profile" />
         </div>
@@ -44,7 +61,9 @@ const DashboardSocial = () => {
         </div>
       </div>
       <div
-        className="performance-report-container"
+        className={`performance-report-container ${showForm ? "hidden" : ""} ${
+          showCalendar ? "hidden" : ""
+        }`}
         style={{ textAlign: "center" }}
       >
         <h1>Performance Report</h1>
@@ -55,5 +74,4 @@ const DashboardSocial = () => {
     </>
   );
 };
-
 export default DashboardSocial;

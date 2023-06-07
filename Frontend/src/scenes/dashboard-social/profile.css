@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 .profile-container {
   display: flex;
   align-items: center;
@@ -10,7 +14,7 @@
     rgba(222, 184, 135, 1) 0%,
     rgba(208, 114, 37, 0.8576680672268908) 86%
   ); */
-  background: white;
+  /* background: white; */
 }
 .profile-photo {
   flex: 1;
