@@ -3,6 +3,8 @@ import Home from "./scenes/Home/HomePage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import DashboardSocial from "./scenes/dashboard-social";
 import Login from "./scenes/Home/HomePage/LoginPage";
+import ManagementTabsPage from "./scenes/Mgmt/ManagementTabs";
+import ActionNeededForm from "./scenes/Mgmt/ActionNeeded";
 // import Profile from "./scenes/dashboard-social/profile";
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/DashboardSocial" element={<DashboardSocial />} />
           <Route exact path="/login" element={<Login />} />
+          <Route exact path="/ManagementTabsPage" element={<ManagementTabsPage />} />
+          <Route exact path="/ActionNeeded" element={<ActionNeededForm />} />
         </Routes>
       </Router>
     </>
