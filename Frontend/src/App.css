@@ -1,8 +1,11 @@
 #root {
-  height: 100%;
   width: 100%;
-}
-.app {
-  display: flex;
-  position: relative;
+  /* ;
+  height: 100vh;
+
+  */
+  padding: 0px;
+  margin: 0px;
+  background-size: cover;
+  min-height: 100vh;
 }

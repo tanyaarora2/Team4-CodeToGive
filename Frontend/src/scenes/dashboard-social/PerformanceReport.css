@@ -1,17 +1,21 @@
+.hidden {
+  display: none;
+}
+
 .chart-container {
   display: flex;
   width: 1200px;
   /* border: 10px solid blue; */
   height: 850x;
-  margin: auto auto;
+  margin: auto;
   /* margin: 0px 150px; */
   justify-content: space-between;
 }
 
 .canvas-container {
   margin-bottom: 20px;
-  height: 450px;
-  width: 600px;
+  height: 400px;
+  width: 500px;
   /* border: 20px solid red; */
   /* margin-right: 30px; */
 }

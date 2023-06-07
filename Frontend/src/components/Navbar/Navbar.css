@@ -12,6 +12,7 @@
 .NavBtn {
   display: flex;
   align-items: center;
+  /* margin-right: 7px; */
 }
 
 .Navbtnlink {
@@ -19,7 +20,7 @@
   background: Rgb(105, 191, 100);
   white-space: nowrap;
   padding: 10px 22px;
-  margin-right: 20px;
+  margin-right: 9px;
   font-size: 18px;
   display: inline-block;
   /* font-weight: bold; */
@@ -32,6 +33,7 @@
 .Navbtnlink > a {
   text-decoration: none;
   color: white;
+  font-family: Arial, sans-serif;
 }
 .navbar-container {
   display: flex;
@@ -46,15 +48,12 @@
   border: none;
   color: #ffffff;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
+  border-radius: 50px;
   display: flex;
+  margin-right: 10px;
   align-items: center;
 }
-
-.dropdown-button:hover {
-  text-decoration: underline;
-}
-
 .dropdown-content {
   position: absolute;
   justify-content: flex-end;

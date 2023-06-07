@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Form, Input, Checkbox, Button } from "antd";
+import "./LoginPage.css";
 
 const Login = () => {
   const onFinish = (values) => {
@@ -16,12 +17,13 @@ const Login = () => {
       <div className="login-box">
         <div className="illustration-wrapper">
           <img
-            src="https://mixkit.imgix.net/art/preview/mixkit-left-handed-man-sitting-at-a-table-writing-in-a-notebook-27-original-large.png?q=80&auto=format%2Ccompress&h=700"
+            src="https://img.freepik.com/free-vector/time-management-landing-page-concept_52683-25264.jpg?w=740&t=st=1686030479~exp=1686031079~hmac=c242cf979d2b179533d356aa32e0901e0645dcd2f45a3be4c1a7aca656fe3238"
             alt="Login"
           />
         </div>
         <Form
           name="login-form"
+          id="login-form"
           initialValues={{ remember: true }}
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
