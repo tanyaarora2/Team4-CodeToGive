@@ -54,7 +54,7 @@ const Login = () => {
               htmlType="submit"
               className="login-form-button"
             >
-              LOGIN
+              <a href="/DashboardSocial">LOGIN</a>
             </Button>
           </Form.Item>
         </Form>

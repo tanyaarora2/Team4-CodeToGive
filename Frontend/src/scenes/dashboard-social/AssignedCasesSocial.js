@@ -23,6 +23,7 @@ function AssignedCasesSocial() {
         </div>
       </nav>
       <SearchBarSocial />
+
       <DataSocial />
     </>
   );

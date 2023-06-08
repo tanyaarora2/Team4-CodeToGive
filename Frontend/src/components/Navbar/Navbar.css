@@ -23,6 +23,8 @@
   margin-right: 9px;
   font-size: 18px;
   display: inline-block;
+  text-align: center;
+
   /* font-weight: bold; */
   outline: none;
   border: none;
@@ -51,7 +53,7 @@
   font-size: 18px;
   border-radius: 50px;
   display: flex;
-  margin-right: 10px;
+  margin-right: 3px;
   align-items: center;
 }
 .dropdown-content {
