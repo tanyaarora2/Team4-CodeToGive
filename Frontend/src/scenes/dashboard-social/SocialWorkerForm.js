@@ -25,6 +25,7 @@ const Form = ({ settShowForm }) => {
     newspaperPublicationPendingSince: "",
     finalPoliceReportPendingSince: "",
     surrenderPendingSince: "",
+    documents: "",
   });
   const handleInputChange = (e) => {
     const { name, value } = e.target;
