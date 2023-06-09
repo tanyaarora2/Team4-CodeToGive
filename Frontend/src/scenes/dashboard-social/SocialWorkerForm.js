@@ -109,13 +109,18 @@ const Form = ({ settShowForm }) => {
         <br />
         <label>
           Gender:
-          <input
-            type="text"
+          <select
+            className="select-feature"
             name="gender"
             value={formData.gender}
             onChange={handleInputChange}
             required
-          />
+          >
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
         </label>
         <br />
         <label>
@@ -153,6 +158,7 @@ const Form = ({ settShowForm }) => {
             <option value="abandoned">Abandoned</option>
             <option value="surrendered">Surrendered</option>
             <option value="admitGuardians">Admitted by Guardians</option>
+            <option value="admitGuardians">Orphaned</option>
           </select>
         </label>
         <br />
@@ -213,7 +219,7 @@ const Form = ({ settShowForm }) => {
         <label>
           Last Visit Since:
           <input
-            type="text"
+            type="date"
             name="lastVisitSince"
             value={formData.lastVisitSince}
             onChange={handleInputChange}
@@ -223,7 +229,7 @@ const Form = ({ settShowForm }) => {
         <label>
           Last Call Since:
           <input
-            type="text"
+            type="date"
             name="lastCallSince"
             value={formData.lastCallSince}
             onChange={handleInputChange}
@@ -264,7 +270,7 @@ const Form = ({ settShowForm }) => {
         <label>
           CWC Last Review:
           <input
-            type="text"
+            type="date"
             name="cwcLastReview"
             value={formData.cwcLastReview}
             onChange={handleInputChange}
