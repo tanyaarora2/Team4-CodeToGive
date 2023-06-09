@@ -1,7 +1,6 @@
 import React from "react";
 import SearchBarSocial from "./SearchBarSocial";
 import { NavBtnLink } from "../../components/Navbar/NavbarELements";
-import DataSocial from "./DataSocial";
 
 function AssignedCasesSocial() {
   return (
@@ -23,8 +22,6 @@ function AssignedCasesSocial() {
         </div>
       </nav>
       <SearchBarSocial />
-
-      <DataSocial />
     </>
   );
 }
