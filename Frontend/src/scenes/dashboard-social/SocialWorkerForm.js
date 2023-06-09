@@ -22,14 +22,17 @@ const Form = ({ settShowForm }) => {
     cwcLastReview: "",
     lastCwcOrder: "",
     caseHistory: "",
-
     newspaperPublicationPendingSince: "",
     finalPoliceReportPendingSince: "",
     surrenderPendingSince: "",
   });
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+    if (name === "age" && parseInt(value) <= 0) {
+      // Show an error message or handle the validation error as needed
+      console.error("Age must be greater than 0");
+      return;
+    }
     setFormData((prevState) => ({
       ...prevState,
       [name]: value,
@@ -67,6 +70,7 @@ const Form = ({ settShowForm }) => {
       newspaperPublicationPendingSince: "",
       finalPoliceReportPendingSince: "",
       surrenderPendingSince: "",
+      documents: "",
     });
 
     // Close the form
@@ -89,6 +93,66 @@ const Form = ({ settShowForm }) => {
             onChange={handleInputChange}
             required
           />
+        </label>
+        <br />
+        <label>
+          Child Name:
+          <input
+            type="text"
+            name="childName"
+            value={formData.childName}
+            onChange={handleInputChange}
+            required
+          />
+        </label>
+        <br />
+        <label>
+          Gender:
+          <input
+            type="text"
+            name="gender"
+            value={formData.gender}
+            onChange={handleInputChange}
+            required
+          />
+        </label>
+        <br />
+        <label>
+          Date of Birth:
+          <input
+            type="date"
+            name="dateOfBirth"
+            value={formData.dateOfBirth}
+            onChange={handleInputChange}
+            required
+          />
+        </label>
+        <br />
+        <label>
+          Age:
+          <input
+            type="number"
+            name="age"
+            value={formData.age}
+            onChange={handleInputChange}
+            required
+          />
+        </label>
+        <br />
+        <label>
+          Child Classification:
+          <select
+            className="select-feature"
+            name="childClassification"
+            value={formData.childClassification}
+            onChange={handleInputChange}
+            required
+          >
+            <option value="">Select Classification</option>
+            <option value="abandoned">Abandoned</option>
+            <option value="surrendered">Surrendered</option>
+            <option value="adopted">Adopted</option>
+          </select>
         </label>
         <br />
         <label>
@@ -125,62 +189,6 @@ const Form = ({ settShowForm }) => {
         </label>
         <br />
         <label>
-          Child Name:
-          <input
-            type="text"
-            name="childName"
-            value={formData.childName}
-            onChange={handleInputChange}
-            required
-          />
-        </label>
-        <br />
-
-        <label>
-          Gender:
-          <input
-            type="text"
-            name="gender"
-            value={formData.gender}
-            onChange={handleInputChange}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Date of Birth:
-          <input
-            type="date"
-            name="dateOfBirth"
-            value={formData.dateOfBirth}
-            onChange={handleInputChange}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Age:
-          <input
-            type="text"
-            name="age"
-            value={formData.age}
-            onChange={handleInputChange}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Child Classification:
-          <input
-            type="text"
-            name="childClassification"
-            value={formData.childClassification}
-            onChange={handleInputChange}
-            required
-          />
-        </label>
-        <br />
-        <label>
           Reason for Admission:
           <input
             type="text"
@@ -198,7 +206,6 @@ const Form = ({ settShowForm }) => {
             name="reasonForFlagging"
             value={formData.reasonForFlagging}
             onChange={handleInputChange}
-            required
           />
         </label>
         <br />
@@ -209,7 +216,6 @@ const Form = ({ settShowForm }) => {
             name="lastVisitSince"
             value={formData.lastVisitSince}
             onChange={handleInputChange}
-            required
           />
         </label>
         <br />
@@ -220,7 +226,6 @@ const Form = ({ settShowForm }) => {
             name="lastCallSince"
             value={formData.lastCallSince}
             onChange={handleInputChange}
-            required
           />
         </label>
         <br />
@@ -231,7 +236,6 @@ const Form = ({ settShowForm }) => {
             name="guardian"
             value={formData.guardian}
             onChange={handleInputChange}
-            required
           />
         </label>
         <br />
@@ -242,7 +246,6 @@ const Form = ({ settShowForm }) => {
             name="siblingDetails"
             value={formData.siblingDetails}
             onChange={handleInputChange}
-            required
           />
         </label>
         <br />
@@ -264,7 +267,6 @@ const Form = ({ settShowForm }) => {
             name="cwcLastReview"
             value={formData.cwcLastReview}
             onChange={handleInputChange}
-            required
           />
         </label>
         <br />
@@ -275,7 +277,6 @@ const Form = ({ settShowForm }) => {
             name="lastCwcOrder"
             value={formData.lastCwcOrder}
             onChange={handleInputChange}
-            required
           />
         </label>
         <br />
@@ -286,7 +287,6 @@ const Form = ({ settShowForm }) => {
             name="caseHistory"
             value={formData.caseHistory}
             onChange={handleInputChange}
-            required
           />
         </label>
         <br />
@@ -297,7 +297,6 @@ const Form = ({ settShowForm }) => {
             name="newspaperPublicationPendingSince"
             value={formData.newspaperPublicationPendingSince}
             onChange={handleInputChange}
-            required
           />
         </label>
         <br />
@@ -308,7 +307,6 @@ const Form = ({ settShowForm }) => {
             name="finalPoliceReportPendingSince"
             value={formData.finalPoliceReportPendingSince}
             onChange={handleInputChange}
-            required
           />
         </label>
         <br />
@@ -319,7 +317,16 @@ const Form = ({ settShowForm }) => {
             name="surrenderPendingSince"
             value={formData.surrenderPendingSince}
             onChange={handleInputChange}
-            required
+          />
+        </label>
+        <br />
+        <label>
+          Add a drive link to all the documents:
+          <input
+            type="text"
+            name="documents"
+            value={formData.documents}
+            onChange={handleInputChange}
           />
         </label>
         <br />

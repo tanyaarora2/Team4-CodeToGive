@@ -10,6 +10,7 @@
   border-radius: 25px;
   color: white;
   padding: 20px;
+  width: 821px;
 }
 label {
   display: block;
@@ -17,7 +18,9 @@ label {
 }
 
 .AddCaseForm input[type="text"],
-input[type="date"] {
+input[type="date"],
+input[type="number"],
+.select-feature {
   width: 100%;
   padding: 8px;
   border-radius: 5px;

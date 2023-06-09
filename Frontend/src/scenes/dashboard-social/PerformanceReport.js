@@ -21,11 +21,11 @@ function PerformanceReport() {
       pieChart = new Chart(pieChartCtx, {
         type: "pie",
         data: {
-          labels: ["Active Cases", "Solved Cases", "Label 3"],
+          labels: ["Active Cases", "Solved Cases"],
           datasets: [
             {
-              data: [30, 60, 50],
-              backgroundColor: ["#FFB380", "#FEE08B", "ABDDA4"],
+              data: [30, 60],
+              backgroundColor: ["ABDDA4", "#FEE08B"],
             },
           ],
         },

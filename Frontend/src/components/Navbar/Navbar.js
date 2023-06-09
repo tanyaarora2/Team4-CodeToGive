@@ -1,24 +1,39 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
-import { NavBtnLink } from "./NavbarELements";
+
 function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
+  const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
+  };
+  const toggleDropdown2 = () => {
+    setIsDropdownOpen2(!isDropdownOpen2);
   };
 
   return (
     <>
       <nav className="home-navbar">
         <div className="navbar-container">
-          <div className="NavBtn">
-            <div className="Navbtnlink">
-              <NavBtnLink to="Login">Log In</NavBtnLink>
-            </div>
+          <div className="NavBtn Navbtnlink">
+            <button className="dropdown-button" onClick={toggleDropdown2}>
+              Log In
+            </button>
+            {isDropdownOpen2 && (
+              <div className="dropdown-content">
+                <ul>
+                  <li>
+                    <Link to="/Login">Social Worker</Link>
+                  </li>
+                  <li>
+                    <Link to="/LoginCase">Case Manager</Link>
+                  </li>
+                </ul>
+              </div>
+            )}
           </div>
           <div className="NavBtn">
-            {/* <div className="Navbtnlink"> */}
             <button className="dropdown-button" onClick={toggleDropdown}>
               Language
             </button>
@@ -33,10 +48,10 @@ function Navbar() {
               </ul>
             </div>
           )}
-          {/* </div> */}
         </div>
       </nav>
     </>
   );
 }
+
 export default Navbar;
