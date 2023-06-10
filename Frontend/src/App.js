@@ -14,8 +14,14 @@ import AdmittedTimeline from "./scenes/Mgmt/AdmittedTimeline";
 import CompletedCases from "./scenes/Mgmt/CompletedCases";
 import EachCasePage from "./scenes/Mgmt/EachCasePage";
 import { useState } from "react";
+import MgmtLandingPage from "./scenes/Mgmt/MgmtLandingPage";
+import SearchBarSocial from "./scenes/dashboard-social/SearchBarSocial";
 function App() {
   const [caseNumber, setSelectedCaseNumber] = useState(null);
+  const [caseNumberassign, setSelectedCaseNumberassign] = useState(null);
+  const [caseNumberaction, setCaseNumberAction] = useState(null);
+
+
   return (
     <>
       <Router>
@@ -27,21 +33,54 @@ function App() {
           <Route
             exact
             path="/ManagementTabsPage"
-            element={<ManagementTabsPage setSelectedCaseNumber={setSelectedCaseNumber}/>}
+            element={
+              <ManagementTabsPage
+                setSelectedCaseNumber={setSelectedCaseNumber}
+                setCaseNumberAction={setCaseNumberAction}
+
+              />
+
+            }
           />
           <Route
             exact
             path="/AssignedCases"
-            element={<AssignedCasesSocial />}
+            element={<SearchBarSocial setSelectedCaseNumberassign={setSelectedCaseNumberassign} />}
           />
-          <Route exact path="/ActionNeeded" element={<ActionNeededForm />} />
+          <Route exact path="/ActionNeeded" element={<ActionNeededForm CaseNumberAction={caseNumberaction} />} />
           <Route exact path="/LoginCase" element={<LoginCase />} />
-          <Route exact path="/AbandonedTimeline" element={<AbandonedTimeline />} />
-          <Route exact path="/OrphanedTimeline" element={<OrphanedTimeline />} />
-          <Route exact path="/SurrenderedTimeline" element={<SurrenderedTimeline />} />
-          <Route exact path="/AdmittedTimeline" element={<AdmittedTimeline />} />
+          <Route
+            exact
+            path="/AbandonedTimeline"
+            element={<AbandonedTimeline />}
+          />
+          <Route
+            exact
+            path="/OrphanedTimeline"
+            element={<OrphanedTimeline />}
+          />
+          <Route
+            exact
+            path="/SurrenderedTimeline"
+            element={<SurrenderedTimeline />}
+          />
+          <Route
+            exact
+            path="/AdmittedTimeline"
+            element={<AdmittedTimeline />}
+          />
           <Route exact path="/CompletedCases" element={<CompletedCases />} />
-          <Route exact path="/EachCasePage" element={<EachCasePage caseNumber={caseNumber}/>} />
+          <Route
+            exact
+            path="/EachCasePage"
+            element={<EachCasePage caseNumber={caseNumber} />}
+          />
+          <Route
+            exact
+            path="/EachCasePageAssign"
+            element={<EachCasePage caseNumber={caseNumberassign} />}
+          />
+          <Route exact path="/MgmtLandingPage" element={<MgmtLandingPage />} />
         </Routes>
       </Router>
     </>

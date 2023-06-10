@@ -1,39 +1,40 @@
 /* SearchBar.css */
 
 .search-bar-container {
-    display: flex;
-    align-items: center;
-    margin: 30px;
-    
-  }
-  
-  .search-bar-input {
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
-  }
-  
-  .search-bar-input:focus {
-    outline: none;
-    border-color: #888;
-    padding-left: 2%;
-  }
+  display: flex;
+  align-items: center;
+  margin: 30px;
 
-  .sort-button, .filter-button {
-    width: 100px;
-    padding: 8px 12px;
-    margin: 10px;
-    background-color: #bbbaba;
-    border: none;
-    border-radius: 40px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .sort-button:hover, .filter-button:hover {
-    background-color: #ddd;
-  }
-  
+}
+
+.search-bar-input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar-input:focus {
+  outline: none;
+  border-color: #888;
+  padding-left: 2%;
+}
+
+.sort-button,
+.filter-button {
+  width: 100px;
+  padding: 8px 12px;
+  margin: 10px;
+  background-color: #bbbaba;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.sort-button:hover,
+.filter-button:hover {
+  background-color: #ddd;
+}

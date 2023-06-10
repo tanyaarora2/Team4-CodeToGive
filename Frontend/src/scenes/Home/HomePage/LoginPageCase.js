@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Form, Input, Checkbox, Button } from "antd";
 import "./LoginPage.css";
+import { NavBtnLink } from "../../../components/Navbar/NavbarELements";
 
 const LoginCase = () => {
   const onFinish = (values) => {
@@ -54,7 +55,7 @@ const LoginCase = () => {
               htmlType="submit"
               className="login-form-button"
             >
-              <a href="/ManagementTabsPage">LOGIN</a>
+              <a href="/MgmtLandingPage">LOGIN</a>
             </Button>
           </Form.Item>
         </Form>

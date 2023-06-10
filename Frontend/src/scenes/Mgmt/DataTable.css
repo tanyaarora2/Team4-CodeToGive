@@ -1,16 +1,24 @@
 .grid-table-mgmt {
-    width:90%;
-    border-collapse: collapse;
-    margin-left: 45px;
-  }
-  
-  .grid-table-mgmt th,
-  .grid-table-mgmt td {
-    border: 1px solid black;
-    text-align: center;
-  }
+  width: 90%;
+  border-collapse: collapse;
+  margin-left: 45px;
+}
 
-  .grid-table-mgmt thead {
-    color: #362740;
-    text-transform:uppercase ;
-  }
+.grid-table-mgmt th,
+.grid-table-mgmt td {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.grid-table-mgmt thead {
+  color: #362740;
+  text-transform: uppercase;
+}
+
+.tobeAssignedContainer {
+  display: flex;
+}
+
+.tobeAssignedtable {
+  width: 50%;
+}
