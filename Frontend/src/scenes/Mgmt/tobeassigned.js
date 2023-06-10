@@ -35,7 +35,7 @@ function ParentComponent() {
       textbox2: 45,
     },
     {
-      id: 1,
+      id: 6,
       name: "Manya Gupta",
       textbox1: "Mumbai",
       textbox2: 63,
