@@ -11,18 +11,22 @@ const ProgressBar = ({ textarray }) => {
         <div className="progress-container">
           {textarray.map((text, i) => {
             return (
-              <div className={`circle ${i === activeCircle ? "active" : ""}`}>
-                <p
-                  className="circle-text"
-                  style={{ top:"-50px" }}
-                >
+              <div
+                className={`circle ${
+                  i === activeCircle ? "active-progress" : ""
+                }`}
+              >
+                <p className="circle-text" style={{ top: "-50px" }}>
                   {text}
                 </p>
               </div>
             );
           })}
         </div>
-        <button className="move-button" onClick={moveCircle}>{`NEXT >>>>`}</button>
+        <button
+          className="move-button"
+          onClick={moveCircle}
+        >{`NEXT >>>>`}</button>
       </div>
     </>
   );

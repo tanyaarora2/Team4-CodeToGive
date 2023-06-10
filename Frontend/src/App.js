@@ -14,6 +14,7 @@ import AdmittedTimeline from "./scenes/Mgmt/AdmittedTimeline";
 import CompletedCases from "./scenes/Mgmt/CompletedCases";
 import EachCasePage from "./scenes/Mgmt/EachCasePage";
 import { useState } from "react";
+import MgmtLandingPage from "./scenes/Mgmt/MgmtLandingPage";
 function App() {
   const [caseNumber, setSelectedCaseNumber] = useState(null);
   return (
@@ -27,7 +28,11 @@ function App() {
           <Route
             exact
             path="/ManagementTabsPage"
-            element={<ManagementTabsPage setSelectedCaseNumber={setSelectedCaseNumber}/>}
+            element={
+              <ManagementTabsPage
+                setSelectedCaseNumber={setSelectedCaseNumber}
+              />
+            }
           />
           <Route
             exact
@@ -36,12 +41,33 @@ function App() {
           />
           <Route exact path="/ActionNeeded" element={<ActionNeededForm />} />
           <Route exact path="/LoginCase" element={<LoginCase />} />
-          <Route exact path="/AbandonedTimeline" element={<AbandonedTimeline />} />
-          <Route exact path="/OrphanedTimeline" element={<OrphanedTimeline />} />
-          <Route exact path="/SurrenderedTimeline" element={<SurrenderedTimeline />} />
-          <Route exact path="/AdmittedTimeline" element={<AdmittedTimeline />} />
+          <Route
+            exact
+            path="/AbandonedTimeline"
+            element={<AbandonedTimeline />}
+          />
+          <Route
+            exact
+            path="/OrphanedTimeline"
+            element={<OrphanedTimeline />}
+          />
+          <Route
+            exact
+            path="/SurrenderedTimeline"
+            element={<SurrenderedTimeline />}
+          />
+          <Route
+            exact
+            path="/AdmittedTimeline"
+            element={<AdmittedTimeline />}
+          />
           <Route exact path="/CompletedCases" element={<CompletedCases />} />
-          <Route exact path="/EachCasePage" element={<EachCasePage caseNumber={caseNumber}/>} />
+          <Route
+            exact
+            path="/EachCasePage"
+            element={<EachCasePage caseNumber={caseNumber} />}
+          />
+          <Route exact path="/MgmtLandingPage" element={<MgmtLandingPage />} />
         </Routes>
       </Router>
     </>

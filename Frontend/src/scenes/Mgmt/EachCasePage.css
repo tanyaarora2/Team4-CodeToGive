@@ -1,10 +1,9 @@
 .each_case_number {
-    background-color: #362740;
-    color: white;
-    font-size: 200%;
-    padding: 20px 40px;
+  background-color: #362740;
+  color: white;
+  font-size: 200%;
+  padding: 20px 40px;
 }
-
 
 /*.each_case_textarea_label {
     font-size: 120%;
@@ -23,47 +22,56 @@
 */
 
 .each_case_details {
-    line-height: 50px;
-    font-weight: 600;
-    font-size: 150%;
-    margin: 2%;
+  line-height: 50px;
+  font-weight: 600;
+  font-size: 150%;
+  margin: 2%;
 }
 
 .each_case_formData {
-    margin-left: 150px;
-    margin-top: 150px;
-  }
+  margin-left: 6px;
+  margin-top: 9px;
+}
 
- .each_case_formData textarea {
-    border-width: 2px;
-    margin: 5px 30px;
- } 
+@media screen and (max-width: 768px) {
+  .each_case_textarea {
+    flex: 0 0 100%; /* On smaller screens, set each textarea to occupy 100% width */
+  }
+}
+.image-container {
+  position: relative;
+  height: 13rem;
+}
 
- .profile-progress-span {
-    display: flex;
-    flex-direction: row;
- }
-  
-  .labels-span {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex: 0 0 calc(40% - 200px); /*Set each textarea to occupy 50% width minus the desired spacing */
-    box-sizing: border-box;
-    padding: 0px 56px;
-    
-  } 
-  
-  .each_case_textarea_label {
-    font-weight: bold;
-    margin-top: 20px;
-    width: 225px;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .each_case_textarea {
-      flex: 0 0 100%; /* On smaller screens, set each textarea to occupy 100% width */
-    }
-  }
-  
-  
+.top-left-image {
+  border: 5px solid Rgb(54, 39, 64);
+  position: relative;
+  top: -20px;
+  left: 29px;
+  width: 204px;
+  height: 204px;
+}
+.labels-span {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 0 0 calc(40% - 200px); /*Set each textarea to occupy 50% width minus the desired spacing */
+  box-sizing: border-box;
+  padding: 0px 28px;
+}
+.each_case_formData textarea {
+  border-width: 2px;
+  margin: 5px 26px;
+  width: 232px;
+  font-size: 16px;
+}
+.profile-progress-span {
+  display: flex;
+  flex-direction: row;
+}
+
+.each_case_textarea_label {
+  font-weight: bold;
+  margin-top: 20px;
+  width: 290px;
+}
