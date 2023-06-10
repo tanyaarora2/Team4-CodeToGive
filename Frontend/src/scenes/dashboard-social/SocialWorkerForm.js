@@ -158,7 +158,7 @@ const Form = ({ settShowForm }) => {
             <option value="abandoned">Abandoned</option>
             <option value="surrendered">Surrendered</option>
             <option value="admitGuardians">Admitted by Guardians</option>
-            <option value="admitGuardians">Orphaned</option>
+            <option value="orphaned">Orphaned</option>
           </select>
         </label>
         <br />
