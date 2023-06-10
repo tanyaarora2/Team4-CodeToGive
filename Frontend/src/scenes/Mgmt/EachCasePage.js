@@ -18,7 +18,7 @@ const EachCasePage = ({ caseNumber }) => {
         </span>
       </span>
       <div className="image-container">
-        <img src={imageSrc} alt="Your Image" className="top-left-image" />
+        <img src={imageSrc} alt="Your-Profile" className="top-left-image" />
       </div>
       <div className="each_case_formData">
         <span className="labels-span">

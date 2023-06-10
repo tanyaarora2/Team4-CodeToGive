@@ -78,6 +78,7 @@ const SearchBarSocial = () => {
     <>
       <div className="search-bar-container">
         <input
+          style={{ width: "90%" }}
           className="search-bar-input"
           type="text"
           placeholder="Search"
