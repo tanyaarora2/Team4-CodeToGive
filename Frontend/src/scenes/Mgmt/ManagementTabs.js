@@ -152,7 +152,7 @@ const ManagementTabsPage = ({ setSelectedCaseNumber }) => {
             className="details-btn"
             onClick={() => ActionNeededDetails(index)}
           >
-            Details
+            <NavBtnLink to="/ActionNeeded">Details</NavBtnLink>
           </button>
         </td>
       </tr>
