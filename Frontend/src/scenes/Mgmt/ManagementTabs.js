@@ -5,6 +5,7 @@ import "./ButtonStyles.css";
 import "./DataTable.css";
 import CheckBox from "./CheckBox";
 import { NavBtnLink } from "../../components/Navbar/NavbarELements";
+import ParentComponent from "./tobeassigned";
 
 const ManagementTabsPage = ({ setSelectedCaseNumber }) => {
   const [activeTab, setActiveTab] = useState("inProgress");
@@ -184,18 +185,25 @@ const ManagementTabsPage = ({ setSelectedCaseNumber }) => {
         return (
           <>
             <SearchBar input_width={"30%"} />
-            <table className="grid-table-mgmt" style={{ width: "40%" }}>
-              <thead>
-                <tr>
-                  <th>Case Number</th>
-                  <th>Child Name</th>
-                  <th>District</th>
-                  <th>Classification</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>{renderTableRowsToBeAssigned()}</tbody>
-            </table>
+            <div className="tobeAssignedContainer">
+              <div className="tobeAssignedtable">
+                <table className="grid-table-mgmt" style={{ width: "90%" }}>
+                  <thead>
+                    <tr>
+                      <th>Case Number</th>
+                      <th>Child Name</th>
+                      <th>District</th>
+                      <th>Classification</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>{renderTableRowsToBeAssigned()}</tbody>
+                </table>
+              </div>
+              <div className="tobeAssignedParent">
+                <ParentComponent />
+              </div>
+            </div>
           </>
         );
       case "actionNeeded":

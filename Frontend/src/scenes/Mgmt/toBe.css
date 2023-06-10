@@ -1,0 +1,45 @@
+.box-tobe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tobe-heading {
+  margin-bottom: 10px;
+}
+
+.text-box-tobe {
+  display: flex; /* Change to display the text boxes inline */
+  align-items: center; /* Add this to vertically center the text boxes */
+  margin-bottom: 10px;
+}
+
+.text-box-tobe input {
+  width: 200px;
+  padding: 5px;
+  margin-right: 10px; /* Add this to create spacing between the text boxes */
+}
+
+.assign-button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
