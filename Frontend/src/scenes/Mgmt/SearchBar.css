@@ -21,9 +21,10 @@
   padding-left: 2%;
 }
 
+
 .sort-button,
 .filter-button {
-  width: 100px;
+  width: fit-content;
   padding: 8px 12px;
   margin: 10px;
   background-color: #bbbaba;
