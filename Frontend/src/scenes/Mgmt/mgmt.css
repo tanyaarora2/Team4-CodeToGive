@@ -8,6 +8,12 @@ body {
 }
 
 code {
+<<<<<<< HEAD
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+=======
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+>>>>>>> 6d7adcb8278bd1d9ac7d5a4714ec9b4c872a3cb1

@@ -35,6 +35,7 @@
 
 @media screen and (max-width: 768px) {
   .each_case_textarea {
+<<<<<<< HEAD
     flex: 0 0 100%;
     /* On smaller screens, set each textarea to occupy 100% width */
   }
@@ -45,6 +46,16 @@
   height: 13rem;
 }
 
+=======
+    flex: 0 0 100%; /* On smaller screens, set each textarea to occupy 100% width */
+  }
+}
+.image-container {
+  position: relative;
+  height: 13rem;
+}
+
+>>>>>>> 6d7adcb8278bd1d9ac7d5a4714ec9b4c872a3cb1
 .top-left-image {
   border: 5px solid Rgb(54, 39, 64);
   position: relative;
@@ -53,24 +64,37 @@
   width: 204px;
   height: 204px;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6d7adcb8278bd1d9ac7d5a4714ec9b4c872a3cb1
 .labels-span {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+<<<<<<< HEAD
   flex: 0 0 calc(40% - 200px);
   /*Set each textarea to occupy 50% width minus the desired spacing */
   box-sizing: border-box;
   padding: 0px 28px;
 }
 
+=======
+  flex: 0 0 calc(40% - 200px); /*Set each textarea to occupy 50% width minus the desired spacing */
+  box-sizing: border-box;
+  padding: 0px 28px;
+}
+>>>>>>> 6d7adcb8278bd1d9ac7d5a4714ec9b4c872a3cb1
 .each_case_formData textarea {
   border-width: 2px;
   margin: 5px 26px;
   width: 232px;
   font-size: 16px;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6d7adcb8278bd1d9ac7d5a4714ec9b4c872a3cb1
 .profile-progress-span {
   display: flex;
   flex-direction: row;
@@ -80,4 +104,8 @@
   font-weight: bold;
   margin-top: 20px;
   width: 290px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 6d7adcb8278bd1d9ac7d5a4714ec9b4c872a3cb1

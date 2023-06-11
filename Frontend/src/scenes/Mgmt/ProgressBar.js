@@ -47,6 +47,7 @@ const ProgressBar = ({ childClassification }) => {
   };
   return (
     <>
+<<<<<<< HEAD
       <button className="progress-bar-container" style={{ cursor: "pointer", border: "none", backgroundColor: "white" }}>
         <NavBtnLink to={timelineurl}>
           <div className="progress-bar-container">
@@ -71,6 +72,29 @@ const ProgressBar = ({ childClassification }) => {
           </div>
         </NavBtnLink>
       </button>
+=======
+      <div className="progress-bar-container">
+        <div className="progress-container">
+          {textarray.map((text, i) => {
+            return (
+              <div
+                className={`circle ${
+                  i === activeCircle ? "active-progress" : ""
+                }`}
+              >
+                <p className="circle-text" style={{ top: "-50px" }}>
+                  {text}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+        <button
+          className="move-button"
+          onClick={moveCircle}
+        >{`NEXT >>>>`}</button>
+      </div>
+>>>>>>> 6d7adcb8278bd1d9ac7d5a4714ec9b4c872a3cb1
     </>
   );
 };
