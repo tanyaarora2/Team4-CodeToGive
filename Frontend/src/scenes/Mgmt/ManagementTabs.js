@@ -79,11 +79,11 @@ const ManagementTabsPage = ({ setSelectedCaseNumber, setCaseNumberAction }) => {
       <>
         {data.map((item, index) => (
           <tr>
-            {<td><CheckBox /></td>}
             {item.Assigned_To === 'None' && item.Action === Boolean(false) && <td>{item.Case_Number}</td>}
             {item.Assigned_To === 'None' && item.Action === Boolean(false) && <td>{item.Child_Name}</td>}
             {item.Assigned_To === 'None' && item.Action === Boolean(false) && <td>{item.Child_Classification}</td>}
             {item.Assigned_To === 'None' && item.Action === Boolean(false) && <td>{item.Age}</td>}
+            {item.Assigned_To === 'None' && item.Action === Boolean(false) && <td><CheckBox /></td>}
 
 
           </tr>

@@ -47,7 +47,7 @@ const ProgressBar = ({ childClassification }) => {
   };
   return (
     <>
-      <button className="progress-bar-container" style={{ cursor: "pointer", border: "none", backgroundColor: "white" }}>
+      {/* <button style={{ cursor: "pointer", border: "none", backgroundColor: "white" }}> */}
         <NavBtnLink to={timelineurl}>
           <div className="progress-bar-container">
             <div className="progress-container">
@@ -57,20 +57,21 @@ const ProgressBar = ({ childClassification }) => {
                     className={`circle ${i === activeCircle ? "active-progress" : ""
                       }`}
                   >
-                    <p className="circle-text" style={{ top: "-50px" }}>
+                    <p className="circle-text">
                       {text}
                     </p>
                   </div>
                 );
               })}
             </div>
-            <button
+          </div>
+          </NavBtnLink>
+          {/* <button
               className="move-button"
               onClick={moveCircle}
-            >{`MOVE`}</button>
-          </div>
-        </NavBtnLink>
-      </button>
+              >{`MOVE`}</button> */}
+        
+      {/* </button> */}
     </>
   );
 };
