@@ -3,7 +3,6 @@
 <div align="center">
 
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/tanyaarora2/Team4-CodeToGive?logo=github&style=for-the-badge)](https://github.com/tanyaarora2/) 
-[![GitHub issues](https://img.shields.io/github/issues/tanyaarora2/Team4-CodeToGive?style=for-the-badge)](https://GitHub.com/tanyaarora2/Team4-CodeToGive/issues/)
 [![Languages](https://img.shields.io/github/languages/count/tanyaarora2/Team4-CodeToGive?style=for-the-badge)](https://github.com/tanyaarora2/Team4-CodeToGive)
 
     
