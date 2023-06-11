@@ -31,12 +31,15 @@ class Case(models.Model):
     Newspaper_Date = models.CharField(max_length=100, null=True)
     Police_Date = models.CharField(max_length=100, null=True)
     Surrender_Date = models.CharField(max_length=100, null=True)
-    # Management_Progress = models.CharField(max_length=100, choices=Mgmt_progress, default=)
+    Progress = models.CharField(
+        max_length=100, default="Working on Documentaion")
     Assigned_To = models.CharField(max_length=100, default='None')
     Action = models.BooleanField(default=False, null=True)
     Action_Problem = models.TextField(null=True)
     Action_Solution = models.TextField(null=True)
     Completed = models.BooleanField(default=False, null=True)
+    Newspaper_Doc = models.FileField(null=True)
+    Police_Doc = models.FileField(null=True)
 
 
 class Social_Worker(models.Model):

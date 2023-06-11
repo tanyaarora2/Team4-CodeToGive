@@ -16,6 +16,7 @@
   ); */
   /* background: white; */
 }
+
 .profile-photo {
   flex: 1;
   margin-left: 120px;
@@ -41,6 +42,7 @@
   flex: 4;
   height: 248px;
   margin-top: 0px 0px;
+  margin-left: 10px;
   /* border: 20px solid blue; */
 }
 

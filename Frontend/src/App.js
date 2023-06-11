@@ -5,6 +5,7 @@ import DashboardSocial from "./scenes/dashboard-social";
 import Login from "./scenes/Home/HomePage/LoginPageSocial";
 import ManagementTabsPage from "./scenes/Mgmt/ManagementTabs";
 import ActionNeededForm from "./scenes/Mgmt/ActionNeeded";
+import AssignedCasesSocial from "./scenes/dashboard-social/AssignedCasesSocial";
 import LoginCase from "./scenes/Home/HomePage/LoginPageCase";
 import AbandonedTimeline from "./scenes/Mgmt/AbandonedTimeline";
 import OrphanedTimeline from "./scenes/Mgmt/OrphanedTimeline";

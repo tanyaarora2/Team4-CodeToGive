@@ -7,7 +7,7 @@ const ProgressBar = ({ childClassification }) => {
   let timelineurl = "";
   if (childClassification === "Abandoned") {
     textarray = [
-      "Work On and Complete Documentation",
+      "Complete Documentation",
       "Submit to DCPU and get NOC",
       "Submit to CWC and get LFA",
       "Get Child Uploaded to Carings"
@@ -16,7 +16,7 @@ const ProgressBar = ({ childClassification }) => {
   }
   else if (childClassification === "Child Admitted By Family") {
     textarray = [
-      "Work On and Complete Documentation",
+      "Complete Documentation",
       "Submit to DCPU and get NOC",
       "Submit to CWC and get LFA",
       "Get Child Uploaded to Carings"
@@ -48,29 +48,29 @@ const ProgressBar = ({ childClassification }) => {
   return (
     <>
       {/* <button style={{ cursor: "pointer", border: "none", backgroundColor: "white" }}> */}
-        <NavBtnLink to={timelineurl}>
-          <div className="progress-bar-container">
-            <div className="progress-container">
-              {textarray.map((text, i) => {
-                return (
-                  <div
-                    className={`circle ${i === activeCircle ? "active-progress" : ""
-                      }`}
-                  >
-                    <p className="circle-text">
-                      {text}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
+      <NavBtnLink to={timelineurl}>
+        <div className="progress-bar-container">
+          <div className="progress-container">
+            {textarray.map((text, i) => {
+              return (
+                <div
+                  className={`circle ${i === activeCircle ? "active-progress" : ""
+                    }`}
+                >
+                  <p className="circle-text">
+                    {text}
+                  </p>
+                </div>
+              );
+            })}
           </div>
-          </NavBtnLink>
-          {/* <button
+        </div>
+      </NavBtnLink>
+      {/* <button
               className="move-button"
               onClick={moveCircle}
               >{`MOVE`}</button> */}
-        
+
       {/* </button> */}
     </>
   );

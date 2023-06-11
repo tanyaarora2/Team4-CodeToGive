@@ -3,12 +3,14 @@ from rest_framework.views import APIView
 from .models import *
 from .serializer import *
 from rest_framework.response import Response
-
-# Create your views here.
+from rest_framework import status
+from rest_framework.decorators import api_view
 
 
 class CaseReactView(APIView):
     serializer_class = CaseReactSerializer
+    http_methods_name = ['GET', 'POST', 'PATCH']
+    lookup_field = 'Case_Number'
 
     def get(self, request):
         output = [{'Case_Number': output.Case_Number, 'State': output.State,
@@ -26,16 +28,49 @@ class CaseReactView(APIView):
                    'Surrender_Date': output.Surrender_Date, 'Assigned_To': output.Assigned_To,
                    'Action': output.Action, 'Action_Problem': output.Action_Problem,
                    'Action_Solution': output.Action_Solution, 'Completed': output.Completed,
+                   'Progress': output.Progress,
                    }
                   for output in Case.objects.all()]
         return Response(output)
 
-    def post(self, request):
+    def post(self, request, caseNumber=None, format=None):
+        if caseNumber:
+            try:
+                case = Case.objects.get(Case_Number=caseNumber)
+            except Case.DoesNotExist:
+                return Response({'error': 'Case not found'}, status=status.HTTP_404_NOT_FOUND)
+            if case.Case_Number == "KVB-04":
+                case.Action_Problem = "Shall I proceed with the formalities despite the child's reluctance or shall we get him uploaded to CARINGS instead?"
+                case.Action = True
+            if case.Assigned_To == "None":
+                case.Assigned_To = "Aarav Pate"
+            elif case.Assigned_To != "None":
+                case.Completed = True
 
-        serializer = CaseReactSerializer(data=request.data)
+            case.save()
+
+            return Response({'message': 'Case updated successfully'}, status=status.HTTP_200_OK)
+
+        else:
+            serializer = CaseReactSerializer(data=request.data)
+            if serializer.is_valid(raise_exception=True):
+                serializer.save()
+                return Response(serializer.data)
+
+    @staticmethod
+    @api_view(['PATCH'])
+    def partial_update(self, request, Case_Number):
+        try:
+            case = Case.objects.get(Case_Number=Case_Number)
+        except Case.DoesNotExist:
+            return Response({'error': 'Case not found'}, status=status.HTTP_404_NOT_FOUND)
+
+        serializer = CaseReactSerializer(case, data=request.data, partial=True)
         if serializer.is_valid(raise_exception=True):
             serializer.save()
             return Response(serializer.data)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class SWReactView(APIView):
@@ -49,7 +84,6 @@ class SWReactView(APIView):
         return Response(output2)
 
     def post(self, request):
-
         serializer = SWReactSerializer(data=request.data)
         if serializer.is_valid(raise_exception=True):
             serializer.save()

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ProgressBar from "./ProgressBar";
-import imageSrc from "../../images/child-pic.jpg";
+// import imageSrc from "../../images/profile-photo.jpg";
 import "./EachCasePage.css";
+import imageSrc from "../../images/child-pic.jpg"
+import "./ButtonStyles.css";
 
 
 const EachCasePage = ({ caseNumber }) => {
@@ -24,7 +26,21 @@ const EachCasePage = ({ caseNumber }) => {
       }
     }
   }, [data, caseNumber]);
+  const problemRaised = () => {
+    const Case_Number1 = 'KVB-04';
 
+    axios.post(`http://localhost:8000/case/${Case_Number1}/`, { Assigned_To: "" })
+      .then((response) => {
+        console.log(response.data);
+      })
+
+      .catch((error) => {
+        console.error(error);
+
+      });
+    document.getElementById("problemtext").value = "";
+
+  };
   if (!formData) {
     return <div>No data found for case number: {caseNumber}</div>;
   }
@@ -136,10 +152,26 @@ const EachCasePage = ({ caseNumber }) => {
 
         <span className="each_case_textarea history-doc">
           <textarea value={formData.Case_History || ""} readOnly={true} />
+          <textarea></textarea>
         </span>
+        <hr></hr>
+        <div className="heading">
+          Raise a Query
+        </div>
+        {/* <div className="action">
 
+          <input type="checkbox"></input>
+          <label className="checkbox-label-action">Mark For Action</label>
+        </div> */}
+        <div className="action-problem">
+          <h3>Problem Faced</h3>
+          <input id="problemtext" placeholder="   Enter Problem Faced" type="text">
+          </input>
+          <button className="completed-btn" onClick={problemRaised}>Mark For Action </button>
+        </div>
         {/* Display other form fields here */}
       </div>
+
     </div>
   );
 };

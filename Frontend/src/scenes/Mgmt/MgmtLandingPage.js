@@ -28,7 +28,7 @@ function MgmtLandingPage() {
           {/* <br></br> */}
           <div className="line"></div>
           {/* <br></br> */}
-          <h1>In Progress</h1>
+          <h1>Active Cases</h1>
           {/* <p>In Progress</p> */}
         </div>
         <div className="MgmtBoxes">

@@ -12,6 +12,7 @@
 
 .grid-table-mgmt thead {
   color: #362740;
+  line-height: 30px;
   text-transform: uppercase;
 }
 
