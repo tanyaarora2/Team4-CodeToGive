@@ -24,27 +24,18 @@
 }
 
 .text-box-tobe {
-<<<<<<< HEAD
   display: flex;
   /* Change to display the text boxes inline */
   align-items: center;
   /* Add this to vertically center the text boxes */
-=======
-  display: flex; /* Change to display the text boxes inline */
-  align-items: center; /* Add this to vertically center the text boxes */
->>>>>>> 6d7adcb8278bd1d9ac7d5a4714ec9b4c872a3cb1
   margin-bottom: 10px;
 }
 
 .text-box-tobe input {
   width: 200px;
   padding: 5px;
-<<<<<<< HEAD
   margin-right: 10px;
   /* Add this to create spacing between the text boxes */
-=======
-  margin-right: 10px; /* Add this to create spacing between the text boxes */
->>>>>>> 6d7adcb8278bd1d9ac7d5a4714ec9b4c872a3cb1
 }
 
 .assign-button {
@@ -54,8 +45,4 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 6d7adcb8278bd1d9ac7d5a4714ec9b4c872a3cb1

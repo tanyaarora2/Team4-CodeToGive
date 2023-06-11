@@ -98,7 +98,7 @@ const SearchBarSocial = ({ setSelectedCaseNumberassign }) => {
       </nav>
       <div className="search-bar-container">
         <input
-          style={{ width: "90%" }}
+          style={{ width: "70%" }}
           className="search-bar-input"
           type="text"
           placeholder="Search"

@@ -1,7 +1,6 @@
 import React from "react";
 import "./toBe.css";
 import swphoto from "../../images/userprofile2.jpeg";
-<<<<<<< HEAD
 import { NavBtnLink } from "../../components/Navbar/NavbarELements";
 
 function BoxWithPhotoAndName(props) {
@@ -14,11 +13,6 @@ function BoxWithPhotoAndName(props) {
   //   console.log(textbox2);
   // };
 
-=======
-function BoxWithPhotoAndName(props) {
-  const { name, textbox1, textbox2 } = props;
-
->>>>>>> 6d7adcb8278bd1d9ac7d5a4714ec9b4c872a3cb1
   return (
     <div className="box-tobe">
       <div className="photo">
@@ -41,13 +35,9 @@ function BoxWithPhotoAndName(props) {
           />
         </div>
       </div>
-<<<<<<< HEAD
-      <button className="assign-button" onClick={handleAssignClick}>
+      <button className="assign-button">
         <NavBtnLink to="/ManagementTabsPage">Assign</NavBtnLink>
       </button>
-=======
-      <button className="assign-button">Assign</button>
->>>>>>> 6d7adcb8278bd1d9ac7d5a4714ec9b4c872a3cb1
     </div>
   );
 }
