@@ -16,6 +16,8 @@
 }
 
 .Navbtnlink {
+  font-size: 18px;
+  font-family: Arial;
   border-radius: 50px;
   background: Rgb(105, 191, 100);
   white-space: nowrap;
