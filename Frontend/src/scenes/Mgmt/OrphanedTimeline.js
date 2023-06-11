@@ -5,6 +5,8 @@ const OrphanedTimeline = () => {
 
   const caseID = "BAD_05_2018";  /*To be fetched from DB*/
   const Name = "ABC";  /*To be fetched from DB*/
+  const [selectedFile, setSelectedFile] = useState();
+  const [isFilePicked, setIsFilePicked] = useState(false);
 
   const [step_one, setStepOne] = useState(() => {
     const storedStepOne = localStorage.getItem(`${caseID}_orphaned_step_one`);
@@ -184,7 +186,11 @@ const OrphanedTimeline = () => {
     }
   };
     
-  
+  const changeHandler = (event) => {
+		setSelectedFile(event.target.files[0]);
+		setIsFilePicked(true);
+	};
+
 
 
   return (
@@ -212,6 +218,7 @@ const OrphanedTimeline = () => {
             <th>Task</th>
             <th>Completed</th>
             <th>Not Required</th>
+            <th>Documents</th>  
           </tr>
         </thead>
           <tbody>
@@ -229,6 +236,7 @@ const OrphanedTimeline = () => {
                     </label>
                   </td>
                 ))}
+                <td><input type="file" name="file" onChange={changeHandler} /></td>
               </tr>
             ))}
           </tbody>
@@ -259,6 +267,7 @@ const OrphanedTimeline = () => {
             <th>Task</th>
             <th>Completed</th>
             <th>Not Required</th>
+            <th>Documents</th>  
           </tr>
           </thead>
           <tbody>
@@ -276,6 +285,7 @@ const OrphanedTimeline = () => {
                     </label>
                   </td>
                 ))}
+                <td><input type="file" name="file" onChange={changeHandler} /></td>
               </tr>
             ))}
           </tbody>
@@ -305,6 +315,7 @@ const OrphanedTimeline = () => {
             <th>Task</th>
             <th>Completed</th>
             <th>Not Required</th>
+            <th>Documents</th>  
           </tr>
           </thead>
           <tbody>
@@ -322,6 +333,7 @@ const OrphanedTimeline = () => {
                     </label>
                   </td>
                 ))}
+                <td><input type="file" name="file" onChange={changeHandler} /></td>
               </tr>
             ))}
           </tbody>
@@ -351,6 +363,7 @@ const OrphanedTimeline = () => {
             <th>Task</th>
             <th>Completed</th>
             <th>Not Required</th>
+            <th>Documents</th>  
           </tr>
           </thead>
           <tbody>
@@ -368,6 +381,7 @@ const OrphanedTimeline = () => {
                     </label>
                   </td>
                 ))}
+                <td><input type="file" name="file" onChange={changeHandler} /></td>
               </tr>
             ))}
           </tbody>

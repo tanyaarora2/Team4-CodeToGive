@@ -5,6 +5,8 @@ const AbandonedTimeline = () => {
   
   const caseID = "BAD_05_2018";  /*To be fetched from DB*/
   const Name = "ABC";  /*To be fetched from DB*/
+  const [selectedFile, setSelectedFile] = useState();
+  const [isFilePicked, setIsFilePicked] = useState(false);
 
 
   const [step_one, setStepOne] = useState(() => {
@@ -184,7 +186,10 @@ const AbandonedTimeline = () => {
     }
   };
     
-  
+  const changeHandler = (event) => {
+		setSelectedFile(event.target.files[0]);
+		setIsFilePicked(true);
+	};
 
 
   return (
@@ -212,6 +217,7 @@ const AbandonedTimeline = () => {
             <th>Task</th>
             <th>Completed</th>
             <th>Not Required</th>
+            <th>Documents</th>  
           </tr>
         </thead>
           <tbody>
@@ -229,6 +235,7 @@ const AbandonedTimeline = () => {
                     </label>
                   </td>
                 ))}
+                <td><input type="file" name="file" onChange={changeHandler} /></td>
               </tr>
             ))}
           </tbody>
@@ -260,6 +267,7 @@ const AbandonedTimeline = () => {
             <th>Task</th>
             <th>Completed</th>
             <th>Not Required</th>
+            <th>Documents</th>  
           </tr>
           </thead>
           <tbody>
@@ -277,6 +285,7 @@ const AbandonedTimeline = () => {
                     </label>
                   </td>
                 ))}
+                <td><input type="file" name="file" onChange={changeHandler} /></td>
               </tr>
             ))}
           </tbody>
@@ -307,6 +316,7 @@ const AbandonedTimeline = () => {
             <th>Task</th>
             <th>Completed</th>
             <th>Not Required</th>
+            <th>Documents</th>  
           </tr>
           </thead>
           <tbody>
@@ -324,6 +334,7 @@ const AbandonedTimeline = () => {
                     </label>
                   </td>
                 ))}
+                <td><input type="file" name="file" onChange={changeHandler} /></td>
               </tr>
             ))}
           </tbody>
@@ -353,6 +364,7 @@ const AbandonedTimeline = () => {
             <th>Task</th>
             <th>Completed</th>
             <th>Not Required</th>
+            <th>Documents</th>  
           </tr>
           </thead>
           <tbody>
@@ -370,6 +382,7 @@ const AbandonedTimeline = () => {
                     </label>
                   </td>
                 ))}
+                <td><input type="file" name="file" onChange={changeHandler} /></td>
               </tr>
             ))}
           </tbody>
