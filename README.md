@@ -1,4 +1,4 @@
-[![Nurture Orphans](https://github.com/tanyaarora2/Team4-CodeToGive/preview/)]
+[![Kare4Kids](https://github.com/tanyaarora2/Team4-CodeToGive/preview/)]
 
 <div align="center">
 
@@ -19,7 +19,7 @@
     
       
 ## 💛 Introduction 
-Nurture Orphans is in the process of developing a comprehensive website that will feature separate login portals for two crucial roles: Social Workers and the Management team. 
+Kare4Kids is in the process of developing a comprehensive website that will feature separate login portals for two crucial roles: Social Workers and the Management team. 
 
 📌 This platform aims to facilitate seamless collaboration and efficient operations within the organization. 
 
@@ -31,7 +31,7 @@ Nurture Orphans is in the process of developing a comprehensive website that wil
 
 📌 Additionally, the Operation Management team will closely monitor the execution of tasks by both the Case Management team and Social Workers, ensuring that all operations are carried out smoothly and efficiently. 
 
-Through this website, Nurture Orphans aims to streamline the adoption process and provide optimal support for both Social Workers and the Management team, ultimately benefiting the children in their care.
+Through this website, Kare4Kids aims to streamline the adoption process and provide optimal support for both Social Workers and the Management team, ultimately benefiting the children in their care.
 
 ## 💡 Why?
 By combining our empathy, passion, research, collaborative discussions, and inspiration from existing initiatives, we were able to conceptualize and develop a comprehensive approach to child donation and support. Our goal is to provide a platform that empowers individuals to make a difference and ensure that every child has access to love, care, and opportunities for a brighter future.
