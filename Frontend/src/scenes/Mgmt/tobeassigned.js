@@ -8,13 +8,13 @@ function ParentComponent() {
       id: 1,
       name: "Aarav Pate",
       textbox1: "Andheri",
-      textbox2: 65,
+      textbox2: 12,
     },
     {
       id: 2,
       name: "Riya Sharma",
       textbox1: "Lonawala",
-      textbox2: 42,
+      textbox2: 23,
     },
     {
       id: 3,

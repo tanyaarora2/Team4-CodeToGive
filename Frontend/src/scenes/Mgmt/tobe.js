@@ -1,8 +1,17 @@
 import React from "react";
 import "./toBe.css";
 import swphoto from "../../images/userprofile2.jpeg";
+import { NavBtnLink } from "../../components/Navbar/NavbarELements";
+
 function BoxWithPhotoAndName(props) {
   const { name, textbox1, textbox2 } = props;
+
+  // const handleAssignClick = () => {
+  //   const incrementedValue = parseInt(textbox2) + 1; // Increment the value by 1
+  //   console.log(incrementedValue);
+  //   props.onTextbox2Change(incrementedValue.toString()); // Update the value using props.onTextbox2Change
+  //   console.log(textbox2);
+  // };
 
   return (
     <div className="box-tobe">
@@ -26,7 +35,9 @@ function BoxWithPhotoAndName(props) {
           />
         </div>
       </div>
-      <button className="assign-button">Assign</button>
+      <button className="assign-button">
+        <NavBtnLink to="/ManagementTabsPage">Assign</NavBtnLink>
+      </button>
     </div>
   );
 }

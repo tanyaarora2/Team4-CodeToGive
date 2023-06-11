@@ -5,6 +5,8 @@ const AdmittedTimeline = () => {
   
   const caseID = "BAD_05_2018";  /*To be fetched from DB*/
   const Name = "ABC";  /*To be fetched from DB*/
+  const [selectedFile, setSelectedFile] = useState();
+  const [isFilePicked, setIsFilePicked] = useState(false);
 
 
   const [step_one, setStepOne] = useState(() => {
@@ -183,7 +185,10 @@ const AdmittedTimeline = () => {
     }
   };
     
-  
+  const changeHandler = (event) => {
+		setSelectedFile(event.target.files[0]);
+		setIsFilePicked(true);
+	};
 
 
   return (
@@ -211,6 +216,7 @@ const AdmittedTimeline = () => {
             <th>Task</th>
             <th>Completed</th>
             <th>Not Required</th>
+            <th>Documents</th>  
           </tr>
         </thead>
           <tbody>
@@ -228,6 +234,7 @@ const AdmittedTimeline = () => {
                     </label>
                   </td>
                 ))}
+                <td><input type="file" name="file" onChange={changeHandler} /></td>
               </tr>
             ))}
           </tbody>
@@ -259,6 +266,7 @@ const AdmittedTimeline = () => {
             <th>Task</th>
             <th>Completed</th>
             <th>Not Required</th>
+            <th>Documents</th>  
           </tr>
           </thead>
           <tbody>
@@ -276,6 +284,7 @@ const AdmittedTimeline = () => {
                     </label>
                   </td>
                 ))}
+                <td><input type="file" name="file" onChange={changeHandler} /></td>
               </tr>
             ))}
           </tbody>
@@ -305,6 +314,7 @@ const AdmittedTimeline = () => {
             <th>Task</th>
             <th>Completed</th>
             <th>Not Required</th>
+            <th>Documents</th>  
           </tr>
           </thead>
           <tbody>
@@ -322,6 +332,7 @@ const AdmittedTimeline = () => {
                     </label>
                   </td>
                 ))}
+                <td><input type="file" name="file" onChange={changeHandler} /></td>
               </tr>
             ))}
           </tbody>
@@ -351,6 +362,7 @@ const AdmittedTimeline = () => {
             <th>Task</th>
             <th>Completed</th>
             <th>Not Required</th>
+            <th>Documents</th>  
           </tr>
           </thead>
           <tbody>
@@ -368,6 +380,7 @@ const AdmittedTimeline = () => {
                     </label>
                   </td>
                 ))}
+                <td><input type="file" name="file" onChange={changeHandler} /></td>
               </tr>
             ))}
           </tbody>

@@ -1,9 +1,8 @@
 .progress-bar-container {
-  height: 13rem;
+  height: 204px;
   width: 76rem;
   margin-top: 6%;
   margin-left: 7%;
-  border-radius: 1%;
   border: 3px solid Rgb(54, 39, 64);
   display: flex;
   position: absolute;
@@ -16,7 +15,7 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  max-width: 100%;
+  max-width: 80%;
   width: 100%;
   margin: 0 2rem;
 }
@@ -43,8 +42,13 @@
 
 .circle-text {
   position: absolute;
-  left: -20px;
-  height: 50%;
+  top: -80px;
+  height: 175px;
+  width: 200px;
+  text-align: center;
+  left: -80px;
+  height: 60px;
+  color: black;
 }
 
 .active-progress::before {
@@ -61,10 +65,14 @@
 
 .move-button {
   position: absolute;
-  bottom: 5%;
-  background-color: transparent;
-  border: 2px solid #b17b0f;
+  top: 47%;
+  margin-left: 650px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #69BF64;
+  border: 2px solid #69BF64;
+  border-radius: 1%;
   padding: 1rem 2rem;
+  cursor: pointer;
 }
 
 .move-button:hover {

@@ -1,0 +1,72 @@
+.tabContainer {
+  display: flex;
+  margin: 0px 0px;
+  background-color: #362740;
+  padding: 20px;
+}
+
+.tabButton {
+  background-color: #f2f2f2;
+  box-shadow: 1cm white ;
+  border: none;
+  width: 25%;
+  padding: 10px 20px;
+  margin: 5px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  text-transform:uppercase ;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.tabButton:hover {
+  background-color: #ddd;
+}
+
+.tabButton.active {
+  background-color: #69BF64;
+  border-bottom: 2px solid black;
+}
+
+.home-button {
+   width: 60px;
+   font-size: 60%;
+   margin-left: 35%;
+   color: white;
+   line-height: 0.35cm;
+   background-color: #362740;
+   cursor: pointer;
+   border: none;
+}
+
+.home-img {
+  width: 30px;
+  margin:0%;
+}
+
+.details-btn {
+  background-color: #69BF64;
+  border: none;
+  width: 50%;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+  .details-btn:hover, .form-submit:hover {
+  background-color: #458b42;
+}
+
+.form-submit {
+  background-color: #69BF64;
+  border: none;
+  width: 20%;
+  margin: 2% 40%;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+

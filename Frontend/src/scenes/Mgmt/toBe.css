@@ -24,15 +24,18 @@
 }
 
 .text-box-tobe {
-  display: flex; /* Change to display the text boxes inline */
-  align-items: center; /* Add this to vertically center the text boxes */
+  display: flex;
+  /* Change to display the text boxes inline */
+  align-items: center;
+  /* Add this to vertically center the text boxes */
   margin-bottom: 10px;
 }
 
 .text-box-tobe input {
   width: 200px;
   padding: 5px;
-  margin-right: 10px; /* Add this to create spacing between the text boxes */
+  margin-right: 10px;
+  /* Add this to create spacing between the text boxes */
 }
 
 .assign-button {

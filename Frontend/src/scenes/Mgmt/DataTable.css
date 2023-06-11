@@ -14,9 +14,11 @@
   color: #362740;
   text-transform: uppercase;
 }
+
 .tobeAssignedContainer {
   display: flex;
 }
+
 .tobeAssignedtable {
   width: 50%;
 }

@@ -6,6 +6,7 @@
   }
   
   .step-name {
+    display: table;
     font-size: 150%;
     font-weight: 600;
     padding-left: 40px;
@@ -14,19 +15,21 @@
     text-align: center;
     font-weight: bold;
     color: #362740;
-    margin-left: 30%;
+    margin: 0px auto;
   }
   
   .all-completed-checkbox {
+    display: table;
     width: 30px;
     height: 30px;
-    margin: 20px 0px 0px 20px;
+    margin: 30px auto;
   }
   
   .grid-table-timeline {
     border-collapse: collapse;
-    margin-left: 23%;
-    width: 50%; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%; 
     margin-top: 40px;
     
   }

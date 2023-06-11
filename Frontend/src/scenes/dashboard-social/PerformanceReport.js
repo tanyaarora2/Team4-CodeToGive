@@ -1,11 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Chart from "chart.js/auto";
 import "./PerformanceReport.css";
+import axios from 'axios';
 
 function PerformanceReport() {
+  const [swdata, setswData] = useState([]);
+  useEffect(() => {
+    axios.get('http://127.0.0.1:8000/socialworker/')
+      .then(res => {
+        setswData(res.data);
+      });
+  }, []);
   useEffect(() => {
     let pieChart = null;
     let barChart = null;
+
 
     const initializeCharts = () => {
       // Destroy the existing charts if they exist
@@ -24,7 +33,7 @@ function PerformanceReport() {
           labels: ["Active Cases", "Solved Cases"],
           datasets: [
             {
-              data: [30, 60],
+              data: [swdata[0]?.Active_Cases, swdata[0]?.Solved_Cases],
               backgroundColor: ["ABDDA4", "#FEE08B"],
             },
           ],
@@ -65,7 +74,7 @@ function PerformanceReport() {
         barChart.destroy();
       }
     };
-  }, []);
+  }, [swdata]);
 
   return (
     <div className="chart-container">

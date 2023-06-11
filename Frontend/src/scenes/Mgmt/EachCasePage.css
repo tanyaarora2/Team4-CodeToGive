@@ -35,9 +35,11 @@
 
 @media screen and (max-width: 768px) {
   .each_case_textarea {
-    flex: 0 0 100%; /* On smaller screens, set each textarea to occupy 100% width */
+    flex: 0 0 100%;
+    /* On smaller screens, set each textarea to occupy 100% width */
   }
 }
+
 .image-container {
   position: relative;
   height: 13rem;
@@ -55,10 +57,12 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  flex: 0 0 calc(40% - 200px); /*Set each textarea to occupy 50% width minus the desired spacing */
+  flex: 0 0 calc(40% - 200px);
+  /*Set each textarea to occupy 50% width minus the desired spacing */
   box-sizing: border-box;
   padding: 0px 28px;
 }
+
 .each_case_formData textarea {
   border-width: 2px;
   margin: 5px 26px;
