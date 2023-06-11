@@ -89,7 +89,7 @@ const SearchBarSocial = ({ setSelectedCaseNumberassign }) => {
         </div>
         <div className="right-buttons">
           <div className="NavBtn  Navbtnlink">
-            <NavBtnLink to="/">Home</NavBtnLink>
+            <NavBtnLink to="/">Log Out</NavBtnLink>
           </div>
           <div className="NavBtn  Navbtnlink">
             <NavBtnLink to="/DashboardSocial">Profile</NavBtnLink>
@@ -98,16 +98,16 @@ const SearchBarSocial = ({ setSelectedCaseNumberassign }) => {
       </nav>
       <div className="search-bar-container">
         <input
-          style={{ width: "70%" }}
+          style={{ width: "67%" }}
           className="search-bar-input"
           type="text"
-          placeholder="Search"
+          placeholder="Search by Case Number or Child Name"
           value={searchQuery}
           onChange={handleSearchChange}
         />
 
         <button className="sort-button" onClick={handleSort}>
-          Sort
+          Sort by Age
         </button>
         <div className="filter-dropdown">
           <select
@@ -131,8 +131,10 @@ const SearchBarSocial = ({ setSelectedCaseNumberassign }) => {
           <tr>
             <th>CASE NUMBER</th>
             <th>CHILD NAME</th>
-            <th>AGE</th>
             <th>CHILD CLASSIFICATION</th>
+            <th>AGE</th>
+            <th>CURRENT PROGRESS</th>
+
             <th></th>
             {/* Add more table header columns as needed */}
           </tr>
@@ -140,11 +142,12 @@ const SearchBarSocial = ({ setSelectedCaseNumberassign }) => {
         <tbody>
           {filterData.map((item, index) => (
             <tr key={index}>
-              {item.Assigned_To === 'None' && item.Action === Boolean(false) && <td>{item.Case_Number}</td>}
-              {item.Assigned_To === 'None' && item.Action === Boolean(false) && <td>{item.Child_Name}</td>}
-              {item.Assigned_To === 'None' && item.Action === Boolean(false) && <td>{item.Child_Classification}</td>}
-              {item.Assigned_To === 'None' && item.Action === Boolean(false) && <td>{item.Age}</td>}
-              {item.Assigned_To === 'None' && item.Action === Boolean(false) && <td><button className='details-btn' onClick={() => inProgressDetails(item, index)}>Details</button></td>}
+              {item.Assigned_To === 'Aarav Pate' && item.Action === Boolean(false) && <td>{item.Case_Number}</td>}
+              {item.Assigned_To === 'Aarav Pate' && item.Action === Boolean(false) && <td>{item.Child_Name}</td>}
+              {item.Assigned_To === 'Aarav Pate' && item.Action === Boolean(false) && <td>{item.Child_Classification}</td>}
+              {item.Assigned_To === 'Aarav Pate' && item.Action === Boolean(false) && <td>{item.Age}</td>}
+              {item.Assigned_To === 'Aarav Pate' && item.Action === Boolean(false) && <td>{item.Progress}</td>}
+              {item.Assigned_To === 'Aarav Pate' && item.Action === Boolean(false) && <td><button className='details-btn' onClick={() => inProgressDetails(item, index)}>Details</button></td>}
             </tr>
           ))}
         </tbody>

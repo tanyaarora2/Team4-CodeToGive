@@ -31,7 +31,7 @@ const DashboardSocial = () => {
             Add a case
           </button>
           <div className="NavBtn  Navbtnlink">
-            <NavBtnLink to="/AssignedCases">Assigned case</NavBtnLink>
+            <NavBtnLink to="/AssignedCases">Assigned Cases</NavBtnLink>
           </div>
           {showForm && (
             <div className="form-overlay">
@@ -47,7 +47,7 @@ const DashboardSocial = () => {
           {/* <button className="NavBtn Navbtnlink"></button>  */}
           {/* </div> */}
           <div className="NavBtn  Navbtnlink">
-            <NavBtnLink to="/">home</NavBtnLink>
+            <NavBtnLink to="/">Log Out</NavBtnLink>
           </div>
           <button
             className="NavBtn Navbtnlink"
@@ -66,9 +66,9 @@ const DashboardSocial = () => {
           <h2>Profile Details</h2>
           {data.map((item) => (
             <div key={item.Name}>
-              {item.Name === "SW_sample1" && <p>Name : {item.Name}</p>}
-              {item.Name === "SW_sample1" && <p>Age: {item.SW_Age}</p>}
-              {item.Name === "SW_sample1" && <p>Address: {item.Address}</p>}
+              {item.Name === "Aarav Pate" && <p>Name : {item.Name}</p>}
+              {item.Name === "Aarav Pate" && <p>Age: {item.SW_Age}</p>}
+              {item.Name === "Aarav Pate" && <p>Address: {item.Address}</p>}
             </div>
 
 

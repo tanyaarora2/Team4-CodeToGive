@@ -41,7 +41,7 @@ const ManagementTabsPage = ({ setSelectedCaseNumber, setCaseNumberAction }) => {
     // Fetch the case number
     const caseNumber = item.column2;
     setSelectedCaseNumber(caseNumber);
-    navigate("/EachCasePage");
+    navigate('/EachCasePage');
   };
 
   const ActionNeededDetails = (item, index) => {
@@ -113,7 +113,7 @@ const ManagementTabsPage = ({ setSelectedCaseNumber, setCaseNumberAction }) => {
 
   const renderContent = () => {
     switch (activeTab) {
-      case "inProgress":
+      case 'inProgress':
         return (
           <>
             <SearchBar setSelectedCaseNumber={setSelectedCaseNumber} input_width={'80%'} />
@@ -131,7 +131,7 @@ const ManagementTabsPage = ({ setSelectedCaseNumber, setCaseNumberAction }) => {
             </table> */}
           </>
         );
-      case "toBeAssigned":
+      case 'toBeAssigned':
         return (
           <>
             <SearchBarDummy input_width={"30%"} />
@@ -142,7 +142,7 @@ const ManagementTabsPage = ({ setSelectedCaseNumber, setCaseNumberAction }) => {
                     <tr>
                       <th>Case Number</th>
                       <th>Child Name</th>
-                      <th>District</th>
+                      <th>Age</th>
                       <th>Classification</th>
                       <th></th>
                     </tr>
@@ -156,9 +156,10 @@ const ManagementTabsPage = ({ setSelectedCaseNumber, setCaseNumberAction }) => {
             </div>
           </>
         );
-      case "actionNeeded":
+      case 'actionNeeded':
         return (
           <>
+            <SearchBarDummy input_width={"80%"}></SearchBarDummy>
             <br></br>
             <table className="grid-table-mgmt" style={{ width: '90%' }}>
               <thead>
@@ -190,19 +191,20 @@ const ManagementTabsPage = ({ setSelectedCaseNumber, setCaseNumberAction }) => {
           To Be Assigned
         </button>
         <button
-          className={`tabButton ${activeTab === 'inProgress' ? 'active' : ''}`}
-          onClick={() => handleTabClick('inProgress')}
-        >
-          In Progress
-        </button>
-
-        <button
           className={`tabButton ${activeTab === 'actionNeeded' ? 'active' : ''
             }`}
           onClick={() => handleTabClick('actionNeeded')}
         >
           Action Needed
         </button>
+        <button
+          className={`tabButton ${activeTab === 'inProgress' ? 'active' : ''}`}
+          onClick={() => handleTabClick('inProgress')}
+        >
+          Active Cases
+        </button>
+
+
         <button className="home-button">
           <NavBtnLink to="/MgmtLandingPage">
             <img

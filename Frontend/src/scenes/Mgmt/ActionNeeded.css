@@ -6,14 +6,17 @@
 }
 
 .action-needed-form {
-    margin: 0px 40px;
+    margin: 20px 40px;
+    width: 85%;
 }
+
 .form-section-header {
     font-size: 120%;
     font-weight: 600;
     margin-top: 20px;
     margin-bottom: 10px;
 }
+
 .desc-box {
     width: 100%;
     border-radius: 25px;

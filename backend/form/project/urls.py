@@ -22,7 +22,8 @@ from app.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("case/", CaseReactView.as_view(), name='case_data'),
-    path("socialworker/", SWReactView.as_view(), name='sw_data'),
+    path('case/', CaseReactView.as_view(), name='case_data'),
+    path('case/<str:caseNumber>/', CaseReactView.as_view(), name='case_detail'),
+    path('socialworker/', SWReactView.as_view(), name='sw_data'),
     path('', CaseReactView.as_view(), name='default_view'),
 ]

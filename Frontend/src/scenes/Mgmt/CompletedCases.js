@@ -36,6 +36,7 @@ const CompletedCases = () => {
     ));
   };
 
+
   const renderContent = () => {
     return (
       <>
@@ -61,13 +62,13 @@ const CompletedCases = () => {
     <div>
       <div className="tabContainer">
         <button
-          className={`tabButton ${activeTab === "Completed" ? "active" : ""}`}
-          onClick={() => handleTabClick("Completed")}
+          className={`tabButton ${activeTab === 'Completed' ? 'active' : ''}`}
+          onClick={() => handleTabClick('Completed')}
         >
           Completed Cases
         </button>
         <button style={{ marginLeft: '70%' }} className='home-button'>
-          <NavBtnLink to="/MgmtLandingPage">
+          <NavBtnLink to="/">
             <img
               className="home-img"
               src={require("../../images/home.png")}

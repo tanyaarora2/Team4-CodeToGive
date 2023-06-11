@@ -32,26 +32,29 @@ const ActionNeededForm = ({ CaseNumberAction }) => {
   }, [data, CaseNumberAction]);
   return (
     <div>
+
       <div className="tabContainer">
-        <button
-          className={`tabButton ${activeTab === "inProgress" ? "active" : ""}`}
-          onClick={() => handleTabClick("inProgress")}
-        >
-          In Progress
-        </button>
-        <button
-          className={`tabButton ${activeTab === 'toBeAssigned' ? 'active' : ''
-            }`}
+      <button
+          className={`tabButton ${
+            activeTab === 'toBeAssigned' ? 'active' : ''
+          }`}
           onClick={() => handleTabClick('toBeAssigned')}
         >
           To Be Assigned
         </button>
         <button
-          className={`tabButton ${activeTab === 'actionNeeded' ? 'active' : ''
-            }`}
+          className={`tabButton ${
+            activeTab === 'actionNeeded' ? 'active' : ''
+          }`}
           onClick={() => handleTabClick('actionNeeded')}
         >
           Action Needed
+        </button>
+        <button
+          className={`tabButton ${activeTab === 'inProgress' ? 'active' : ''}`}
+          onClick={() => handleTabClick('inProgress')}
+        >
+          Active Cases
         </button>
         <button className='home-button'><img className='home-img' src={require('../../images/home.png')} alt="Home" />HOME</button>
 
@@ -62,19 +65,19 @@ const ActionNeededForm = ({ CaseNumberAction }) => {
         Case Id {formData.Case_Number}: {formData.Child_Name}
       </div>
 
-      <div className="action-needed-form">
-        <div className="form-section-header">Description</div>
+      <div className='action-needed-form'>
+        <div className='form-section-header'>Description</div>
         <div>
           <p> {formData.Case_History}</p>
           {/* <textarea readOnly rows='5' className='desc-box'>{formData.Child_Classification}</textarea> */}
         </div>
 
-        <div className="form-section-header">Problem Faced</div>
+        <div className='form-section-header'>Problem Faced</div>
         <div>
           <p> {formData.Action_Problem}</p>
         </div>
 
-        <div className="form-section-header">Solution</div>
+        <div className='form-section-header'>Solution</div>
         <div>
           <textarea placeholder='Enter solution' rows='5' className='desc-box'></textarea>
         </div>

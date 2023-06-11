@@ -69,7 +69,7 @@ const Calendar = () => {
           },
           {
             id: "5123",
-            title: "Police Verfication",
+            title: "Police Verification",
             date: "2023-06-28",
           },
         ]}

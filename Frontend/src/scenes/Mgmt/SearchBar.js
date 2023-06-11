@@ -82,17 +82,16 @@ const SearchBar = ({ setSelectedCaseNumber }) => {
   return (
     <>
       <div className="search-bar-container">
-        <input style={{ width: '70%' }}
+        <input style={{ width: '65%' }}
           className="search-bar-input"
           type="text"
-          placeholder="Search"
+          placeholder="Search by Case Number or Child Name"
           value={searchQuery}
           onChange={handleSearchChange}
         />
 
         <button className="sort-button" onClick={handleSort}>
-          Sort
-        </button>
+          Sort by Age        </button>
         <div className="filter-dropdown">
           <select
             className="filter-field filter-button"
@@ -115,8 +114,10 @@ const SearchBar = ({ setSelectedCaseNumber }) => {
           <tr>
             <th>CASE NUMBER</th>
             <th>CHILD NAME</th>
-            <th>AGE</th>
             <th>CHILD CLASSIFICATION</th>
+            <th>AGE</th>
+            <th>CURRENT PROGRESS</th>
+
             <th></th>
             {/* Add more table header columns as needed */}
           </tr>
@@ -128,6 +129,7 @@ const SearchBar = ({ setSelectedCaseNumber }) => {
               {item.Assigned_To === 'None' && item.Action === Boolean(false) && <td>{item.Child_Name}</td>}
               {item.Assigned_To === 'None' && item.Action === Boolean(false) && <td>{item.Child_Classification}</td>}
               {item.Assigned_To === 'None' && item.Action === Boolean(false) && <td>{item.Age}</td>}
+              {item.Assigned_To === 'None' && item.Action === Boolean(false) && <td>{item.Progress}</td>}
               {item.Assigned_To === 'None' && item.Action === Boolean(false) && <td><button className='details-btn' onClick={() => inProgressDetails(item, index)}>Details</button></td>}
             </tr>
           ))}

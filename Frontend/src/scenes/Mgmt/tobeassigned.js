@@ -3,6 +3,7 @@ import BoxWithPhotoAndName from "./tobe";
 import "./tobeassigned.css";
 function ParentComponent() {
   // Assume you have an array of data objects
+
   const data = [
     {
       id: 1,
