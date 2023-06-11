@@ -64,13 +64,13 @@ const Calendar = () => {
         initialEvents={[
           {
             id: "12315",
-            title: "All-day event",
-            date: "2022-09-14",
+            title: "Visit Orphanage",
+            date: "2023-06-14",
           },
           {
             id: "5123",
-            title: "Timed event",
-            date: "2022-09-28",
+            title: "Police Verfication",
+            date: "2023-06-28",
           },
         ]}
       />
