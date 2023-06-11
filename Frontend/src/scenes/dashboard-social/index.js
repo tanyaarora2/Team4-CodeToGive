@@ -21,7 +21,7 @@ const DashboardSocial = () => {
             Add a case
           </button>
           <div className="NavBtn  Navbtnlink">
-            <NavBtnLink to="/AssignedCases">Assigned Cases</NavBtnLink>
+            <NavBtnLink to="/AssignedCases">Assigned case</NavBtnLink>
           </div>
           {showForm && (
             <div className="form-overlay">
@@ -37,7 +37,7 @@ const DashboardSocial = () => {
           {/* <button className="NavBtn Navbtnlink"></button>  */}
           {/* </div> */}
           <div className="NavBtn  Navbtnlink">
-            <NavBtnLink to="/">Home</NavBtnLink>
+            <NavBtnLink to="/">home</NavBtnLink>
           </div>
           <button
             className="NavBtn Navbtnlink"
