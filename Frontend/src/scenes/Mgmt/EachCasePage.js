@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ProgressBar from "./ProgressBar";
-import imageSrc from "../../images/profile-photo.jpg";
+import imageSrc from "../../images/child-pic.jpg";
 import "./EachCasePage.css";
 
 
