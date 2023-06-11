@@ -1,3 +1,4 @@
+# Kare4Kids
 [![Kare4Kids](https://github.com/tanyaarora2/Team4-CodeToGive/preview/)]
 
 <div align="center">
