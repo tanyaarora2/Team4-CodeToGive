@@ -15,6 +15,7 @@ function Navbar() {
   return (
     <>
       <nav className="home-navbar">
+            <img className="bal-asha-logo" src={require("../../images/BalAshaLogo.png")}></img>
         <div className="navbar-container">
           <div className="NavBtn Navbtnlink">
             <button className="dropdown-button" onClick={toggleDropdown2}>

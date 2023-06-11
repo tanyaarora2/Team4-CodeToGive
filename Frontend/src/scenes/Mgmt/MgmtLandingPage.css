@@ -40,3 +40,11 @@
   background-color: Rgb(105, 191, 100);
   height: 50px; /* Set the desired height for the container */
 }
+
+.mgmt-dashboard {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(243, 236, 227);
+  color: #362740;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
