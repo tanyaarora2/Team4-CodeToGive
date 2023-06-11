@@ -1,9 +1,39 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import ProgressBar from "./ProgressBar";
+import imageSrc from "../../images/profile-photo.jpg";
+import "./EachCasePage.css";
+
+
+const EachCasePage = ({ caseNumber }) => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    axios.get('http://localhost:8000')
+      .then(res => {
+        setData(res.data);
+
+      });
+  }, []);
+  // const formData = JSON.parse(localStorage.getItem(`${caseNumber}_formData`));
+  const [formData, setFormData] = useState([]);
+  useEffect(() => {
+    if (data.length > 0) {
+      const matchingItem = data.find((item) => item.Case_Number === caseNumber);
+      if (matchingItem) {
+        setFormData(matchingItem);
+      }
+    }
+  }, [data, caseNumber]);
+
+=======
 import React from "react";
 import "./EachCasePage.css";
 import ProgressBar from "./ProgressBar";
 import imageSrc from "../../images/profile-photo.jpg";
 const EachCasePage = ({ caseNumber }) => {
   const formData = JSON.parse(localStorage.getItem(`${caseNumber}_formData`));
+>>>>>>> 6d7adcb8278bd1d9ac7d5a4714ec9b4c872a3cb1
   if (!formData) {
     return <div>No data found for case number: {caseNumber}</div>;
   }
@@ -14,7 +44,11 @@ const EachCasePage = ({ caseNumber }) => {
       <span className="profile-progress-span">
         <span className="each_case_details">PROFILE</span>
         <span>
+<<<<<<< HEAD
+          <ProgressBar childClassification={formData.Child_Classification} />
+=======
           <ProgressBar textarray={["A", "B", "C"]} />
+>>>>>>> 6d7adcb8278bd1d9ac7d5a4714ec9b4c872a3cb1
         </span>
       </span>
       <div className="image-container">
@@ -30,12 +64,21 @@ const EachCasePage = ({ caseNumber }) => {
         </span>
 
         <span className="each_case_textarea">
+<<<<<<< HEAD
+          <textarea value={formData.Child_Name || ""} readOnly={true} />
+          <textarea value={formData.Gender || ""} readOnly={true} />
+          <textarea value={formData.DOB || ""} readOnly={true} />
+          <textarea value={formData.Age || ""} readOnly={true} />
+          <textarea
+            value={formData.Child_Classification || ""}
+=======
           <textarea value={formData.childName || ""} readOnly={true} />
           <textarea value={formData.gender || ""} readOnly={true} />
           <textarea value={formData.dateOfBirth || ""} readOnly={true} />
           <textarea value={formData.age || ""} readOnly={true} />
           <textarea
             value={formData.childClassification || ""}
+>>>>>>> 6d7adcb8278bd1d9ac7d5a4714ec9b4c872a3cb1
             readOnly={true}
           />
         </span>
@@ -49,11 +92,19 @@ const EachCasePage = ({ caseNumber }) => {
         </span>
 
         <span className="each_case_textarea">
+<<<<<<< HEAD
+          <textarea value={formData.State || ""} readOnly={true} />
+          <textarea value={formData.District || ""} readOnly={true} />
+          <textarea value={formData.Shelter_Home || ""} readOnly={true} />
+          <textarea value={formData.Reason_Admission || ""} readOnly={true} />
+          <textarea value={formData.Reason_Flagging || ""} readOnly={true} />
+=======
           <textarea value={formData.state || ""} readOnly={true} />
           <textarea value={formData.district || ""} readOnly={true} />
           <textarea value={formData.shelterHome || ""} readOnly={true} />
           <textarea value={formData.reasonForAdmission || ""} readOnly={true} />
           <textarea value={formData.reasonForFlagging || ""} readOnly={true} />
+>>>>>>> 6d7adcb8278bd1d9ac7d5a4714ec9b4c872a3cb1
         </span>
 
         <span className="labels-span">
@@ -67,10 +118,17 @@ const EachCasePage = ({ caseNumber }) => {
         </span>
 
         <span className="each_case_textarea">
+<<<<<<< HEAD
+          <textarea value={formData.Last_Visit || ""} readOnly={true} />
+          <textarea value={formData.Last_Call || ""} readOnly={true} />
+          <textarea value={formData.Guardian || ""} readOnly={true} />
+          <textarea value={formData.Sibling || ""} readOnly={true} />
+=======
           <textarea value={formData.lastVisitSince || ""} readOnly={true} />
           <textarea value={formData.lastCallSince || ""} readOnly={true} />
           <textarea value={formData.guardian || ""} readOnly={true} />
           <textarea value={formData.siblingDetails || ""} readOnly={true} />
+>>>>>>> 6d7adcb8278bd1d9ac7d5a4714ec9b4c872a3cb1
           <textarea
             value={formData.totalShelterHomeStay || ""}
             readOnly={true}
@@ -92,6 +150,20 @@ const EachCasePage = ({ caseNumber }) => {
         </span>
 
         <span className="each_case_textarea">
+<<<<<<< HEAD
+          <textarea value={formData.CWC_Last_Review || ""} readOnly={true} />
+          <textarea value={formData.CWC_Last_Order || ""} readOnly={true} />
+          <textarea
+            value={formData.Surrender_Date || ""}
+            readOnly={true}
+          />
+          <textarea
+            value={formData.Newspaper_Date || ""}
+            readOnly={true}
+          />
+          <textarea
+            value={formData.Police_Date || ""}
+=======
           <textarea value={formData.cwcLastReview || ""} readOnly={true} />
           <textarea value={formData.lastCwcOrder || ""} readOnly={true} />
           <textarea
@@ -104,6 +176,7 @@ const EachCasePage = ({ caseNumber }) => {
           />
           <textarea
             value={formData.finalPoliceReportPendingSince || ""}
+>>>>>>> 6d7adcb8278bd1d9ac7d5a4714ec9b4c872a3cb1
             readOnly={true}
           />
         </span>
@@ -114,8 +187,12 @@ const EachCasePage = ({ caseNumber }) => {
         </span>
 
         <span className="each_case_textarea history-doc">
+<<<<<<< HEAD
+          <textarea value={formData.Case_History || ""} readOnly={true} />
+=======
           <textarea value={formData.caseHistory || ""} readOnly={true} />
           <textarea value={formData.documents || ""} readOnly={true} />
+>>>>>>> 6d7adcb8278bd1d9ac7d5a4714ec9b4c872a3cb1
         </span>
 
         {/* Display other form fields here */}

@@ -5,6 +5,7 @@
   background-color: #f5f5f5;
   border-radius: 5px;
 }
+
 .AddCaseForm {
   background-color: Rgb(54, 39, 64);
   border-radius: 25px;
@@ -15,6 +16,7 @@
   margin-bottom: 5px;
   margin-left: 25%;
 }
+
 label {
   display: block;
   margin-bottom: 10px;
@@ -46,6 +48,7 @@ input[type="number"],
 .socialFormSubmit:hover {
   background-color: #45a049;
 }
+
 .form-overlay {
   position: absolute;
   top: 90px;
@@ -59,6 +62,7 @@ input[type="number"],
   align-items: center;
   justify-content: center;
 }
+
 /* .add-case-form {
     background-color: #fff;
     padding: 20px;

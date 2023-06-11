@@ -1,77 +1,86 @@
 import React, { useState } from "react";
+import axios from 'axios';
 import "./SocialWorkerForm.css";
 
 const Form = ({ settShowForm }) => {
   const [formData, setFormData] = useState({
-    caseNumber: "",
-    state: "",
-    district: "",
-    shelterHome: "",
-    childName: "",
-    gender: "",
-    dateOfBirth: "",
-    age: "",
-    childClassification: "",
-    reasonForAdmission: "",
-    reasonForFlagging: "",
-    lastVisitSince: "",
-    lastCallSince: "",
-    guardian: "",
-    siblingDetails: "",
-    totalShelterHomeStay: "",
-    cwcLastReview: "",
-    lastCwcOrder: "",
-    caseHistory: "",
-    newspaperPublicationPendingSince: "",
-    finalPoliceReportPendingSince: "",
-    surrenderPendingSince: "",
-    documents: "",
+    Case_Number: "",
+    State: "",
+    District: "",
+    Shelter_Home: "",
+    Child_Name: "",
+    Gender: "",
+    DOB: "",
+    Age: "",
+    Child_Classification: "",
+    Reason_Admission: "",
+    Reason_Flagging: "",
+    Last_Visit: "",
+    Last_Call: "",
+    Guardian: "",
+    Sibling: "",
+    Shelter_Stay: "",
+    CWC_Last_Review: "",
+    CWC_Last_Order: "",
+    Case_History: "",
+    Newspaper_Date: "",
+    Police_Date: "",
+    Surrender_Date: "",
   });
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    if (name === "age" && parseInt(value) <= 0) {
+    if (name === "Age" && parseInt(value) <= 0) {
       // Show an error message or handle the validation error as needed
       console.error("Age must be greater than 0");
       return;
     }
     setFormData((prevState) => ({
       ...prevState,
-      [name]: value,
+      [name]: value !== "" ? value : ""
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form submitted!");
     // Access the form data using the formData state object
+    try {
+      const response = await axios.post('http://localhost:8000', formData);
+
+      // Handle the response here
+    } catch (error) {
+      console.log(error.response.data);
+      console.log(error.config);
+
+      console.error(error);
+    }
+
+
 
     // Clear form values
     setFormData({
-      state: "",
-      district: "",
-      shelterHome: "",
-      childName: "",
-      caseNumber: "",
-      gender: "",
-      dateOfBirth: "",
-      age: "",
-      childClassification: "",
-      reasonForAdmission: "",
-      reasonForFlagging: "",
-      lastVisitSince: "",
-      lastCallSince: "",
-      guardian: "",
-      siblingDetails: "",
-      totalShelterHomeStay: "",
-      cwcLastReview: "",
-      lastCwcOrder: "",
-      caseHistory: "",
-      documentsCompleted: "",
-      documentsPending: "",
-      newspaperPublicationPendingSince: "",
-      finalPoliceReportPendingSince: "",
-      surrenderPendingSince: "",
-      documents: "",
+      Case_Number: "",
+      State: "",
+      District: "",
+      Shelter_Home: "",
+      Child_Name: "",
+      Gender: "",
+      DOB: "",
+      Age: "",
+      Child_Classification: "",
+      Reason_Admission: "",
+      Reason_Flagging: "",
+      Last_Visit: "",
+      Last_Call: "",
+      Guardian: "",
+      Sibling: "",
+      Shelter_Stay: "",
+      CWC_Last_Review: "",
+      CWC_Last_Order: "",
+      Case_History: "",
+      Newspaper_Date: "",
+      Police_Date: "",
+      Surrender_Date: "",
     });
 
     // Close the form
@@ -89,8 +98,8 @@ const Form = ({ settShowForm }) => {
           Case Number:
           <input
             type="text"
-            name="caseNumber"
-            value={formData.caseNumber}
+            name="Case_Number"
+            value={formData.Case_Number}
             onChange={handleInputChange}
             required
           />
@@ -100,8 +109,8 @@ const Form = ({ settShowForm }) => {
           Child Name:
           <input
             type="text"
-            name="childName"
-            value={formData.childName}
+            name="Child_Name"
+            value={formData.Child_Name}
             onChange={handleInputChange}
             required
           />
@@ -111,14 +120,14 @@ const Form = ({ settShowForm }) => {
           Gender:
           <select
             className="select-feature"
-            name="gender"
-            value={formData.gender}
+            name="Gender"
+            value={formData.Genderender}
             onChange={handleInputChange}
             required
           >
             <option value="">Select Gender</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
             <option value="Other">Other</option>
           </select>
         </label>
@@ -127,8 +136,8 @@ const Form = ({ settShowForm }) => {
           Date of Birth:
           <input
             type="date"
-            name="dateOfBirth"
-            value={formData.dateOfBirth}
+            name="DOB"
+            value={formData.DOB}
             onChange={handleInputChange}
             required
           />
@@ -138,8 +147,8 @@ const Form = ({ settShowForm }) => {
           Age:
           <input
             type="number"
-            name="age"
-            value={formData.age}
+            name="Age"
+            value={formData.Age}
             onChange={handleInputChange}
             required
           />
@@ -149,16 +158,16 @@ const Form = ({ settShowForm }) => {
           Child Classification:
           <select
             className="select-feature"
-            name="childClassification"
-            value={formData.childClassification}
+            name="Child_Classification"
+            value={formData.Child_Classification}
             onChange={handleInputChange}
             required
           >
             <option value="">Select Classification</option>
-            <option value="abandoned">Abandoned</option>
-            <option value="surrendered">Surrendered</option>
-            <option value="admitGuardians">Admitted by Guardians</option>
-            <option value="orphaned">Orphaned</option>
+            <option value="Abandoned">Abandoned</option>
+            <option value="Surrendered">Surrendered</option>
+            <option value="Orphaned">Orphaned</option>
+            <option value="Child Admitted By Family">Child Admitted By Family</option>
           </select>
         </label>
         <br />
@@ -166,8 +175,8 @@ const Form = ({ settShowForm }) => {
           State:
           <input
             type="text"
-            name="state"
-            value={formData.state}
+            name="State"
+            value={formData.State}
             onChange={handleInputChange}
             required
           />
@@ -177,8 +186,8 @@ const Form = ({ settShowForm }) => {
           District:
           <input
             type="text"
-            name="district"
-            value={formData.district}
+            name="District"
+            value={formData.District}
             onChange={handleInputChange}
             required
           />
@@ -188,8 +197,8 @@ const Form = ({ settShowForm }) => {
           Shelter Home:
           <input
             type="text"
-            name="shelterHome"
-            value={formData.shelterHome}
+            name="Shelter_Home"
+            value={formData.Shelter_Home}
             onChange={handleInputChange}
             required
           />
@@ -199,8 +208,8 @@ const Form = ({ settShowForm }) => {
           Reason for Admission:
           <input
             type="text"
-            name="reasonForAdmission"
-            value={formData.reasonForAdmission}
+            name="Reason_Admission"
+            value={formData.Reason_Admission}
             onChange={handleInputChange}
             required
           />
@@ -210,8 +219,8 @@ const Form = ({ settShowForm }) => {
           Reason for Flagging:
           <input
             type="text"
-            name="reasonForFlagging"
-            value={formData.reasonForFlagging}
+            name="Reason_Flagging"
+            value={formData.Reason_Flagging}
             onChange={handleInputChange}
           />
         </label>
@@ -220,8 +229,8 @@ const Form = ({ settShowForm }) => {
           Last Visit Since:
           <input
             type="date"
-            name="lastVisitSince"
-            value={formData.lastVisitSince}
+            name="Last_Visit"
+            value={formData.Last_Visit}
             onChange={handleInputChange}
           />
         </label>
@@ -230,8 +239,8 @@ const Form = ({ settShowForm }) => {
           Last Call Since:
           <input
             type="date"
-            name="lastCallSince"
-            value={formData.lastCallSince}
+            name="Last_Call"
+            value={formData.Last_Call}
             onChange={handleInputChange}
           />
         </label>
@@ -240,8 +249,8 @@ const Form = ({ settShowForm }) => {
           Guardian:
           <input
             type="text"
-            name="guardian"
-            value={formData.guardian}
+            name="Guardian"
+            value={formData.Guardian}
             onChange={handleInputChange}
           />
         </label>
@@ -250,8 +259,8 @@ const Form = ({ settShowForm }) => {
           Sibling Details:
           <input
             type="text"
-            name="siblingDetails"
-            value={formData.siblingDetails}
+            name="Sibling"
+            value={formData.Sibling}
             onChange={handleInputChange}
           />
         </label>
@@ -260,8 +269,8 @@ const Form = ({ settShowForm }) => {
           Total Shelter Home Stay:
           <input
             type="text"
-            name="totalShelterHomeStay"
-            value={formData.totalShelterHomeStay}
+            name="Shelter_Stay"
+            value={formData.Shelter_Stay}
             onChange={handleInputChange}
             required
           />
@@ -271,8 +280,8 @@ const Form = ({ settShowForm }) => {
           CWC Last Review:
           <input
             type="date"
-            name="cwcLastReview"
-            value={formData.cwcLastReview}
+            name="CWC_Last_Review"
+            value={formData.CWC_Last_Review}
             onChange={handleInputChange}
           />
         </label>
@@ -281,8 +290,8 @@ const Form = ({ settShowForm }) => {
           Last CWC Order:
           <input
             type="text"
-            name="lastCwcOrder"
-            value={formData.lastCwcOrder}
+            name="CWC_Last_Order"
+            value={formData.CWC_Last_Order}
             onChange={handleInputChange}
           />
         </label>
@@ -291,8 +300,8 @@ const Form = ({ settShowForm }) => {
           Case History:
           <input
             type="text"
-            name="caseHistory"
-            value={formData.caseHistory}
+            name="Case_History"
+            value={formData.Case_History}
             onChange={handleInputChange}
           />
         </label>
@@ -301,8 +310,8 @@ const Form = ({ settShowForm }) => {
           Newspaper Publication Pending Since:
           <input
             type="text"
-            name="newspaperPublicationPendingSince"
-            value={formData.newspaperPublicationPendingSince}
+            name="Newspaper_Date"
+            value={formData.Newspaper_Date}
             onChange={handleInputChange}
           />
         </label>
@@ -311,8 +320,8 @@ const Form = ({ settShowForm }) => {
           Final Police Report Pending Since:
           <input
             type="text"
-            name="finalPoliceReportPendingSince"
-            value={formData.finalPoliceReportPendingSince}
+            name="Police_Date"
+            value={formData.Police_Date}
             onChange={handleInputChange}
           />
         </label>
@@ -321,12 +330,12 @@ const Form = ({ settShowForm }) => {
           Surrender Pending Since:
           <input
             type="text"
-            name="surrenderPendingSince"
-            value={formData.surrenderPendingSince}
+            name="Surrender_Date"
+            value={formData.Surrender_Date}
             onChange={handleInputChange}
           />
         </label>
-        <br />
+        {/* <br />
         <label>
           Add a drive link to all the documents:
           <input
@@ -336,7 +345,7 @@ const Form = ({ settShowForm }) => {
             onChange={handleInputChange}
           />
         </label>
-        <br />
+        <br /> */}
         <button className="socialFormSubmit" type="submit">
           Submit
         </button>

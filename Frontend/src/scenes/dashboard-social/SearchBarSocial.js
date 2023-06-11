@@ -1,40 +1,44 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 import "../Mgmt/SearchBar.css";
-import "./DataSocial.css";
+import "../Mgmt/DataTable.css";
 import "./SearchbarSocial.css";
-const SearchBarSocial = () => {
-  const data = [
-    {
-      sNo: "1",
-      caseNumber: "BAL/6",
-      childName: "Abc",
-      age: 15,
-      childClassification: "Abandoned",
-    },
-    {
-      sNo: "2",
-      caseNumber: "PAL",
-      childName: "Efg",
-      age: 10,
-      childClassification: "Abandoned",
-    },
-    {
-      sNo: "3",
-      caseNumber: "CAL/23",
-      childName: "Manu",
-      age: 9,
-      childClassification: "orphaned",
-    },
-  ];
+import axios from 'axios';
+import { NavBtnLink } from "../../components/Navbar/NavbarELements";
+import "./ButtonStyles.css";
+//import { dA } from "@fullcalendar/core/internal-common";
+
+
+const SearchBarSocial = ({ setSelectedCaseNumberassign }) => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    axios.get('http://localhost:8000')
+      .then(res => {
+        setData(res.data);
+        setFilterData(res.data)
+      });
+  }, []);
+  const inProgressDetails = (item, index) => {
+    console.log(`Button clicked for row ${index}`);
+    // Fetch the case number
+    const caseNumber = item.Case_Number;
+    setSelectedCaseNumberassign(caseNumber);
+    navigate('/EachCasePageAssign');
+  };
+  const navigate = useNavigate();
+
+
   const [searchQuery, setSearchQuery] = useState("");
   const [filterData, setFilterData] = useState(data);
+  // setFilterData(data);
+  // const [filterData, setFilterData] = useState(data);
   const [filterField, setFilterField] = useState("");
   const handleSearchChange = (event) => {
     const searchValue = event.target.value.toLowerCase();
     setSearchQuery(searchValue);
     const newData = data.filter((ele) => {
-      const caseNumber = ele.caseNumber.toLowerCase();
-      const childName = ele.childName.toLowerCase();
+      const caseNumber = ele.Case_Number.toLowerCase();
+      const childName = ele.Child_Name.toLowerCase();
       return (
         caseNumber.includes(searchValue) || childName.includes(searchValue)
       );
@@ -44,7 +48,7 @@ const SearchBarSocial = () => {
   const handleSort = () => {
     const sortedData = [...filterData];
     sortedData.sort((a, b) => {
-      return a.age - b.age;
+      return b.Age - a.Age;
     });
     setFilterData(sortedData);
   };
@@ -62,11 +66,11 @@ const SearchBarSocial = () => {
       return; // No filter value entered, do nothing
     }
     filterValue =
-      filterField === "age" ? parseInt(filterValue) : filterValue.toLowerCase();
-    const filteredData = data.filter((item) => {
+      filterField === "Age" ? parseInt(filterValue) : filterValue.toLowerCase();
+    const filteredData = filterData.filter((item) => {
       const value = item[filterField];
 
-      if (filterField === "age") {
+      if (filterField === "Age") {
         return value === filterValue;
       } else {
         return value.toLowerCase().includes(filterValue);
@@ -76,6 +80,22 @@ const SearchBarSocial = () => {
   };
   return (
     <>
+      <nav className="navbar-social">
+        <div className="left-buttons">
+          <div className="NavBtn  Navbtnlink">
+            Assigned Cases
+            <NavBtnLink to="/AssignedCases"></NavBtnLink>
+          </div>
+        </div>
+        <div className="right-buttons">
+          <div className="NavBtn  Navbtnlink">
+            <NavBtnLink to="/">Home</NavBtnLink>
+          </div>
+          <div className="NavBtn  Navbtnlink">
+            <NavBtnLink to="/DashboardSocial">Profile</NavBtnLink>
+          </div>
+        </div>
+      </nav>
       <div className="search-bar-container">
         <input
           style={{ width: "90%" }}
@@ -96,20 +116,19 @@ const SearchBarSocial = () => {
             onChange={handleFilterFieldChange}
           >
             <option value="">Select Field</option>
-            <option value="caseNumber">Case Number</option>
-            <option value="childName">Child Name</option>
-            <option value="age">Age</option>
-            <option value="childClassification">Child Classification</option>
+            <option value="Case_Number">Case Number</option>
+            <option value="Child_Name">Child Name</option>
+            <option value="Age">Age</option>
+            <option value="Child_Classification">Child Classification</option>
           </select>
           <button className="filter-button" onClick={handleFilter}>
             Filter
           </button>
         </div>
       </div>
-      <table className="social-table">
-        <thead className="head-social">
+      <table className="grid-table-mgmt">
+        <thead >
           <tr>
-            <th>S.NO.</th>
             <th>CASE NUMBER</th>
             <th>CHILD NAME</th>
             <th>AGE</th>
@@ -121,14 +140,11 @@ const SearchBarSocial = () => {
         <tbody>
           {filterData.map((item, index) => (
             <tr key={index}>
-              <td>{item.sNo}</td>
-              <td>{item.caseNumber}</td>
-              <td>{item.childName}</td>
-              <td>{item.age}</td>
-              <td>{item.childClassification}</td>
-              <td>
-                <button className="details-button">Details</button>
-              </td>
+              {item.Assigned_To === 'None' && item.Action === Boolean(false) && <td>{item.Case_Number}</td>}
+              {item.Assigned_To === 'None' && item.Action === Boolean(false) && <td>{item.Child_Name}</td>}
+              {item.Assigned_To === 'None' && item.Action === Boolean(false) && <td>{item.Child_Classification}</td>}
+              {item.Assigned_To === 'None' && item.Action === Boolean(false) && <td>{item.Age}</td>}
+              {item.Assigned_To === 'None' && item.Action === Boolean(false) && <td><button className='details-btn' onClick={() => inProgressDetails(item, index)}>Details</button></td>}
             </tr>
           ))}
         </tbody>

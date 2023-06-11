@@ -15,8 +15,16 @@ import CompletedCases from "./scenes/Mgmt/CompletedCases";
 import EachCasePage from "./scenes/Mgmt/EachCasePage";
 import { useState } from "react";
 import MgmtLandingPage from "./scenes/Mgmt/MgmtLandingPage";
+<<<<<<< HEAD
+import SearchBarSocial from "./scenes/dashboard-social/SearchBarSocial";
+=======
+>>>>>>> 6d7adcb8278bd1d9ac7d5a4714ec9b4c872a3cb1
 function App() {
   const [caseNumber, setSelectedCaseNumber] = useState(null);
+  const [caseNumberassign, setSelectedCaseNumberassign] = useState(null);
+  const [caseNumberaction, setCaseNumberAction] = useState(null);
+
+
   return (
     <>
       <Router>
@@ -31,15 +39,22 @@ function App() {
             element={
               <ManagementTabsPage
                 setSelectedCaseNumber={setSelectedCaseNumber}
+<<<<<<< HEAD
+                setCaseNumberAction={setCaseNumberAction}
+
               />
+
+=======
+              />
+>>>>>>> 6d7adcb8278bd1d9ac7d5a4714ec9b4c872a3cb1
             }
           />
           <Route
             exact
             path="/AssignedCases"
-            element={<AssignedCasesSocial />}
+            element={<SearchBarSocial setSelectedCaseNumberassign={setSelectedCaseNumberassign} />}
           />
-          <Route exact path="/ActionNeeded" element={<ActionNeededForm />} />
+          <Route exact path="/ActionNeeded" element={<ActionNeededForm CaseNumberAction={caseNumberaction} />} />
           <Route exact path="/LoginCase" element={<LoginCase />} />
           <Route
             exact
@@ -67,6 +82,14 @@ function App() {
             path="/EachCasePage"
             element={<EachCasePage caseNumber={caseNumber} />}
           />
+<<<<<<< HEAD
+          <Route
+            exact
+            path="/EachCasePageAssign"
+            element={<EachCasePage caseNumber={caseNumberassign} />}
+          />
+=======
+>>>>>>> 6d7adcb8278bd1d9ac7d5a4714ec9b4c872a3cb1
           <Route exact path="/MgmtLandingPage" element={<MgmtLandingPage />} />
         </Routes>
       </Router>
