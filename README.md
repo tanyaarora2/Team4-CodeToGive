@@ -1,5 +1,5 @@
 # Kare4Kids
-![Kare4Kids](https://github.com/tanyaarora2/Team4-CodeToGive/blob/main/preview/team4page.png)]
+![Kare4Kids](https://github.com/tanyaarora2/Team4-CodeToGive/blob/main/preview/MainPage.jpg)]
 
 <div align="center">
 
