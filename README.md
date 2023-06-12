@@ -1,5 +1,5 @@
 # Kare4Kids
-[![Kare4Kids](https://github.com/tanyaarora2/Team4-CodeToGive/preview/)]
+![Kare4Kids](https://github.com/tanyaarora2/Team4-CodeToGive/blob/main/preview/team4page.png)]
 
 <div align="center">
 
@@ -51,24 +51,24 @@ Learn more about our idea here : [youtube logo](youtube link)
    <td>Form page</td>
    </tr>
   <tr>
-    <td><img src="" width=100% height=260></td>
-    <td><img src="" width=100% height=260></td>
+    <td><img src="https://github.com/tanyaarora2/Team4-CodeToGive/blob/main/preview/landingPage.jpeg" width=100% height=260></td>
+    <td><img src="https://github.com/tanyaarora2/Team4-CodeToGive/blob/main/preview/form.jpeg" width=100% height=260></td>
   </tr>
   <tr>
-   <td>Process Timeline Page</td>
+   <td>In Progress Page</td>
    <td>Assigning Cases Page</td>
    </tr>
   <tr>
-    <td><img src="" width=100% height=260></td>
-    <td><img src="" width=100% height=260></td>
+    <td><img src="https://github.com/tanyaarora2/Team4-CodeToGive/blob/main/preview/InProgressPage.jpeg" width=100% height=260></td>
+    <td><img src="https://github.com/tanyaarora2/Team4-CodeToGive/blob/main/preview/assignedPage.jpeg" width=100% height=260></td>
   </tr>
   <tr>
    <td>Child's Profile Page</td>
-   <td>In Progress Cases Page</td>
+   <td>Management Profile Page</td>
    </tr>
   <tr>
-    <td><img src="" width=100% height=260></td>
-    <td><img src="" width=100% height=260></td>
+    <td><img src="https://github.com/tanyaarora2/Team4-CodeToGive/blob/main/preview/ChildProfile.jpeg" width=100% height=260></td>
+    <td><img src="https://github.com/tanyaarora2/Team4-CodeToGive/blob/main/preview/mgmtProfile.jpeg" width=100% height=260></td>
   </tr>
 </table>
 
