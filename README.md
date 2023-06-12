@@ -37,7 +37,7 @@ Through this website, Kare4Kids aims to streamline the adoption process and prov
 ## 💡 Why?
 By combining our empathy, passion, research, collaborative discussions, and inspiration from existing initiatives, we were able to conceptualize and develop a comprehensive approach to child donation and support. Our goal is to provide a platform that empowers individuals to make a difference and ensure that every child has access to love, care, and opportunities for a brighter future.
 
-Learn more about our idea here : [youtube logo](youtube link)
+Learn more about our idea here : [https://www.youtube.com/watch?v=k_UCqAfqIA4&t=2s](https://www.youtube.com/watch?v=k_UCqAfqIA4&t=2s)
 
 ## 📍 Tech Stack
 
